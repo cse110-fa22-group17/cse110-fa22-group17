@@ -20,6 +20,8 @@
 - ### Create the Team Page
   - Filled out the memeber information.
 - ### Team Contract
-  - (placeholder)
+  - Discuss the rules required.
+  - Discuss the expectations.
+  - Discuss the resolution for conflict.
 
 ## Discussion Notes: 
