@@ -1,6 +1,6 @@
 # CSE110-FA22-GROUP17
 ## Meeting Topic: Kickoff Meeting
-### (Where and When the meeting was held)
+### 10/15/2022  Zoom Meeting
 
 ## Member Attendance:
 - [x] Alex
