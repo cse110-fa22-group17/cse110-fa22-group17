@@ -8,8 +8,8 @@
 
 ## Team Members: 
 - ### Alex Wang: [Role]
-  > (Brief Overview)  
-  > - Personal Github Page: 
+  > Fourth Year, Computer Engineering, Warren College
+  > - Personal Github Page: https://alw002.github.io/
 - ### Aiden Jee: [Role]
   > (Brief Overview)  
   > - Personal Github Page: 
