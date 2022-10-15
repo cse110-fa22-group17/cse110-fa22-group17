@@ -26,7 +26,7 @@
   > (Brief Overview)  
   > - Personal Github Page: 
 - ### Sameer Jain: [Role]
-  > (Brief Overview)  
+  > Third year Computer Science major, Sixth College, intern at Pacific Life.  
   > - Personal Github Page: 
 - ### Sohil Nadarajan: [Role]
   > (Brief Overview)  
