@@ -14,16 +14,14 @@
   > (Brief Overview)  
   > - Personal Github Page: 
 - ### Alan Wen: [Role]
-  > Fourth Year CS Major, transferred from UCD in 2021.
-  > Sixth College
-  > Interned at Apple
-  > - Personal Github Page: 
+  > Fourth Year CS Major, transferred from UCD in 2021. Sixth College, Former Apple Intern
+  > - Personal Github Page: https://github.com/ajwboi
 - ### Alwin Low: [Role]
   > (Brief Overview)  
   > - Personal Github Page: 
 - ### Katherine Wong: [Role]
-  > Fourth year Human Biology Major + Computer Science Minor
-  > - Personal Github Page: https://github.com/katherinemwong
+  > (Brief Overview)  
+  > - Personal Github Page: 
 - ### Raon Choi: [Role]
   > (Brief Overview)  
   > - Personal Github Page: 
@@ -36,6 +34,8 @@
 - ### Yiyang Chen: [Role]
   > (Brief Overview)  
   > - Personal Github Page: 
-- ### Yuheng Ge: [Role]
-  > (Brief Overview)  
+- ### Yuheng Ge: Team Lead
+  > Aspire to be problem-solving.
+  Learn to be patient and meticulous about the work.
+  Learn to be a good communicator and executor.
   > - Personal Github Page: 
