@@ -25,15 +25,15 @@
 - ### Raon Choi: [Role]
   > (Brief Overview)  
   > - Personal Github Page: 
-- ### Sameer Jain: Team Member
+- ### Sameer Jain: [Role]
   > Third year Computer Science major, Sixth College, intern at Pacific Life.  
-  > - Personal Github Page: https://github.com/anonsameer
+  > - Personal Github Page: 
 - ### Sohil Nadarajan: [Role]
   > (Brief Overview)  
   > - Personal Github Page: 
 - ### Yiyang Chen: [Role]
-  > (Brief Overview)  
-  > - Personal Github Page: 
+  > Second Year CS major from Marshall College. 
+  > - Personal Github Page: https://github.com/yic076 
 - ### Yuheng Ge: Team Lead
   > Senior CS student.
   > Aspire to be problem-solving.
