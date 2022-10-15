@@ -1,8 +1,8 @@
 # CSE110-FA22-GROUP17
-## Kickoff Meeting
+## Meeting Topic: Kickoff Meeting
 ### (Where and When the meeting was held)
 
-### Member Attendance:
+## Member Attendance:
 - [ ] Alex
 - [ ] Aiden
 - [ ] Alan
@@ -14,12 +14,12 @@
 - [ ] Yiyang
 - [ ] Yuheng
 
-### Agenda:
-- Old Business
+## Agenda:
+- ### Old Business
   - N/A
-- New Business
+- ### New Business
   - (placeholder)
-- For next time
+- ### Unresolved Business
   - (placeholder)
 
-### Discussion Notes: 
+## Discussion Notes: 
