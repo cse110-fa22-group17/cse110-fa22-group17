@@ -15,11 +15,11 @@
 - [x] Yuheng
 
 ## Agenda:
-- ### Old Business
-  - N/A
-- ### New Business
-  - (placeholder)
-- ### Unresolved Business
+- ### Team Name
+  - Pick the name Clueless for our team.
+- ### Create the Team Page
+  - Filled out the memeber information.
+- ### Team Contract
   - (placeholder)
 
 ## Discussion Notes: 
