@@ -14,10 +14,8 @@
   > (Brief Overview)  
   > - Personal Github Page: 
 - ### Alan Wen: [Role]
-  > Fourth Year CS Major, transferred from UCD in 2021.
-  > Sixth College
-  > Interned at Apple
-  > - Personal Github Page: 
+  > Fourth Year CS Major, transferred from UCD in 2021. Sixth College, Former Apple Intern
+  > - Personal Github Page: https://github.com/ajwboi
 - ### Alwin Low: [Role]
   > (Brief Overview)  
   > - Personal Github Page: 
