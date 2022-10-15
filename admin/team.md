@@ -25,9 +25,9 @@
 - ### Raon Choi: [Role]
   > (Brief Overview)  
   > - Personal Github Page: 
-- ### Sameer Jain: [Role]
+- ### Sameer Jain: Team Member
   > Third year Computer Science major, Sixth College, intern at Pacific Life.  
-  > - Personal Github Page: 
+  > - Personal Github Page: https://github.com/anonsameer
 - ### Sohil Nadarajan: [Role]
   > (Brief Overview)  
   > - Personal Github Page: 
