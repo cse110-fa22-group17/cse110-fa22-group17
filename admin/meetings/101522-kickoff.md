@@ -25,3 +25,5 @@
   - Discuss the resolution for conflict.
 
 ## Discussion Notes: 
+- Discussed that the solution to conlicts which is first meet with team leads and then meet with TA if necessary.
+- Everyone should follow the AI policies, cheating is prohibited.
