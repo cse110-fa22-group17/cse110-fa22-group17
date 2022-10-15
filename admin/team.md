@@ -35,6 +35,7 @@
   > (Brief Overview)  
   > - Personal Github Page: 
 - ### Yuheng Ge: Team Lead
+  > Senior CS student.
   > Aspire to be problem-solving.
   Learn to be patient and meticulous about the work.
   Learn to be a good communicator and executor.
