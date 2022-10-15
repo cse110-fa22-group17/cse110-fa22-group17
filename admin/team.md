@@ -23,8 +23,8 @@
   > Fourth year Human Biology Major + Computer Science Minor
   > - Personal Github Page: https://katherinemwong.github.io/
 - ### Raon Choi: [Role]
-  > (Brief Overview)  
-  > - Personal Github Page: 
+  > Fourth year Math/CSE Major. Marshall College
+  > - Personal Github Page: https://github.com/h1choi0918
 - ### Sameer Jain: Team Member
   > Third year Computer Science major, Sixth College, intern at Pacific Life.  
   > - Personal Github Page: https://github.com/anonsameer
