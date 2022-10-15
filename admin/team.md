@@ -1,6 +1,6 @@
 # CSE110-FA22-GROUP17
 
-## Team Name: 
+## Team Name: Team Clueless
 
 
 ## Team Values:
@@ -14,7 +14,9 @@
   > (Brief Overview)  
   > - Personal Github Page: 
 - ### Alan Wen: [Role]
-  > (Brief Overview)  
+  > Fourth Year CS Major, transferred from UCD in 2021.
+  > Sixth College
+  > Interned at Apple
   > - Personal Github Page: 
 - ### Alwin Low: [Role]
   > (Brief Overview)  
