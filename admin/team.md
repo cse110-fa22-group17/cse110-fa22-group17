@@ -13,7 +13,7 @@
 - ### Aiden Jee: [Role]
   > (Brief Overview)  
   > - Personal Github Page: 
-- ### Alan Wen: [Role]
+- ### Alan Wen: Team Lead
   > Fourth Year CS Major, transferred from UCD in 2021. Sixth College, Former Apple Intern
   > - Personal Github Page: https://github.com/ajwboi
 - ### Alwin Low: [Role]
