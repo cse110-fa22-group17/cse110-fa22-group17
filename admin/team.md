@@ -20,8 +20,8 @@
   > (Brief Overview)  
   > - Personal Github Page: 
 - ### Katherine Wong: [Role]
-  > (Brief Overview)  
-  > - Personal Github Page: 
+  > Fourth year Human Biology Major + Computer Science Minor
+  > - Personal Github Page: https://github.com/katherinemwong
 - ### Raon Choi: [Role]
   > (Brief Overview)  
   > - Personal Github Page: 
