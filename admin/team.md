@@ -8,8 +8,8 @@
 
 ## Team Members: 
 - ### Alex Wang: [Role]
-  > Fourth Year, Computer Engineering, Warren College
-  > - Personal Github Page: https://alw002.github.io/
+  > (Brief Overview)  
+  > - Personal Github Page: 
 - ### Aiden Jee: [Role]
   > (Brief Overview)  
   > - Personal Github Page: 
@@ -35,8 +35,6 @@
   > Second Year CS major from Marshall College. 
   > - Personal Github Page: https://github.com/yic076 
 - ### Yuheng Ge: Team Lead
-  > Senior CS student.
-  > Aspire to be problem-solving.
-  Learn to be patient and meticulous about the work.
-  Learn to be a good communicator and executor.
+  > Senior CS student from ERC college.
+
   > - Personal Github Page: https://github.com/GYH1208
