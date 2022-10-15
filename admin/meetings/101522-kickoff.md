@@ -3,16 +3,16 @@
 ### (Where and When the meeting was held)
 
 ## Member Attendance:
-- [ ] Alex
+- [x] Alex
 - [ ] Aiden
-- [ ] Alan
-- [ ] Alwin
-- [ ] Katherine
-- [ ] Raon
-- [ ] Sameer
+- [x] Alan
+- [x] Alwin
+- [x] Katherine
+- [x] Raon
+- [x] Sameer
 - [ ] Sohil
-- [ ] Yiyang
-- [ ] Yuheng
+- [x] Yiyang
+- [x] Yuheng
 
 ## Agenda:
 - ### Old Business
