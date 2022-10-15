@@ -14,14 +14,16 @@
   > (Brief Overview)  
   > - Personal Github Page: 
 - ### Alan Wen: [Role]
-  > Fourth Year CS Major, transferred from UCD in 2021. Sixth College, Former Apple Intern
-  > - Personal Github Page: https://github.com/ajwboi
+  > Fourth Year CS Major, transferred from UCD in 2021.
+  > Sixth College
+  > Interned at Apple
+  > - Personal Github Page: 
 - ### Alwin Low: [Role]
   > (Brief Overview)  
   > - Personal Github Page: 
 - ### Katherine Wong: [Role]
-  > (Brief Overview)  
-  > - Personal Github Page: 
+  > Fourth year Human Biology Major + Computer Science Minor
+  > - Personal Github Page: https://github.com/katherinemwong
 - ### Raon Choi: [Role]
   > (Brief Overview)  
   > - Personal Github Page: 
