@@ -2,9 +2,14 @@
 
 ## Team Name: Team Clueless
 
+![Clueless Person](./branding/Clueless.png)
 
 ## Team Values:
-
+- Teamwork
+- Openness
+- Communication
+- Adaptability 
+- Focus
 
 ## Team Members: 
 - ### Alex Wang: [Role]
