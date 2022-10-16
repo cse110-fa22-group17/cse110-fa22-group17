@@ -16,9 +16,9 @@
 - ### Alan Wen: Team Lead
   > Fourth Year CS Major, transferred from UCD in 2021. Sixth College, Former Apple Intern
   > - Personal Github Page: https://github.com/ajwboi
-- ### Alwin Low: [Role]
-  > (Brief Overview)  
-  > - Personal Github Page: 
+- ### Alwin Low: Team Member
+  > Fourth Year CS Major in ERC College
+  > - Personal Github Page: https://github.com/AstralWin
 - ### Katherine Wong: [Role]
   > Fourth year Human Biology Major + Computer Science Minor
   > - Personal Github Page: https://katherinemwong.github.io/
@@ -36,5 +36,4 @@
   > - Personal Github Page: https://github.com/yic076 
 - ### Yuheng Ge: Team Lead
   > Senior CS student from ERC college.
-
   > - Personal Github Page: https://github.com/GYH1208
