@@ -29,8 +29,8 @@
   > Third year Computer Science major, Sixth College, intern at Pacific Life.  
   > - Personal Github Page: https://github.com/anonsameer
 - ### Sohil Nadarajan: [Role]
-  > (Brief Overview)  
-  > - Personal Github Page: 
+  > Third year, Math CS major, Revelle College
+  > - Personal Github Page: https://github.com/SohilNadarajan
 - ### Yiyang Chen: [Role]
   > Second Year CS major from Marshall College. 
   > - Personal Github Page: https://github.com/yic076 
