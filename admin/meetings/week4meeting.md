@@ -5,13 +5,13 @@
 
 ## Member Attendance:
 - [x] Alex
-- [ ] Aiden
+- [x] Aiden
 - [x] Alan
 - [x] Alwin
 - [x] Katherine
 - [x] Raon
 - [x] Sameer
-- [ ] Sohil
+- [x] Sohil
 - [x] Yiyang
 - [x] Yuheng
 
