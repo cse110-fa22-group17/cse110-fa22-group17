@@ -25,9 +25,9 @@
   **(2)Put meeting minutes on slack.**
   
   ### BrainStorm Acitivity:
-  **Figure out the application to the project.**
-  **Figure out the what we want to implement.**
-  **Finialize a document after the brainstorm activity.**
+   - **Figure out the application to the project.**
+   - **Figure out the what we want to implement.**
+   - **Finialize a document after the brainstorm activity.**
 
 ## T0DO List:
   **BrainStorm Activity.**
