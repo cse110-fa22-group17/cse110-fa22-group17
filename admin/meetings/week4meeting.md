@@ -28,6 +28,7 @@
    - **Figure out the application to the project.**
    - **Figure out the what we want to implement.**
    - **Finialize a document after the brainstorm activity.**
+   - **Focus on the idea first, not the tools.**
 
 ## T0DO List:
   **BrainStorm Activity.**
