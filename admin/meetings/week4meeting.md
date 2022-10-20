@@ -21,8 +21,8 @@
 
 ## Discussion Notes: 
   ### Improve Slack Communication:
-  - **(1)Reply to messages.**
-  - **(2)Put meeting minutes on slack.**
+  - **Reply to messages.**
+  - **Put meeting minutes on slack.**
   
   ### BrainStorm Acitivity:
    - **Figure out the application to the project.**
