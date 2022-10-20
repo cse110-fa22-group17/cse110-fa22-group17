@@ -1,7 +1,7 @@
 
 # CSE110-FA22-GROUP17
 ## Meeting Topic: Weekly meeting
-### 10/15/2022 
+### 10/19/2022 
 
 ## Member Attendance:
 - [x] Alex
@@ -16,9 +16,17 @@
 - [x] Yuheng
 
 ## Agenda:
-   Brief Introduction to the Brainstorm activity.
+   Improve Slack communication:
+   Introduction to the Brainstorm activity.
 
 ## Discussion Notes: 
-
+  Improve Slack Communication:
+  (1)Reply to messages.
+  (2)Put meeting minutes on slack.
+  
+  BrainStorm Acitivity:
+  Figure out the application to the project.
+  Figure out the what we want to implement.
 
 ## T0DO List:
+  BrainStorm Activity.
