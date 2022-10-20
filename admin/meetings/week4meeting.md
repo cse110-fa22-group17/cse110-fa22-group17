@@ -16,8 +16,8 @@
 - [x] Yuheng
 
 ## Agenda:
-   Improve Slack communication:
-   Introduction to the Brainstorm activity.
+  ### Improve Slack communication:
+  ### Introduction to the Brainstorm activity.
 
 ## Discussion Notes: 
   Improve Slack Communication:
