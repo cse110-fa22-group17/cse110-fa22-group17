@@ -30,5 +30,5 @@
    - **Finialize a document after the brainstorm activity.**
    - **Focus on the idea first, not the tools.**
 
-## T0DO List:
-  **BrainStorm Activity.**
+## TODO List:
+  **BrainStorm Activity**
