@@ -30,4 +30,4 @@
   **Finialize a document after the brainstorm activity.**
 
 ## T0DO List:
-  ## BrainStorm Activity.
+  **BrainStorm Activity.**
