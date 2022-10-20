@@ -20,11 +20,11 @@
   ### Introduction to the Brainstorm activity.
 
 ## Discussion Notes: 
-  Improve Slack Communication:
+  ### Improve Slack Communication:
   (1)Reply to messages.
   (2)Put meeting minutes on slack.
   
-  BrainStorm Acitivity:
+  ### BrainStorm Acitivity:
   Figure out the application to the project.
   Figure out the what we want to implement.
   Finialize a document after the brainstorm activity.
