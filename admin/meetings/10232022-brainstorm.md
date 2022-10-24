@@ -15,11 +15,11 @@
 - [x] Yuheng
 
 ## Agenda:
-  -Brainstorm Activity
-  -Assign Roles
+  --Brainstorm Activity
+  --Assign Roles
 
 ## Discussion Notes: 
- 
+   
   
   ### BrainStorm Acitivity:
    - **Figure out the application to the project.**
