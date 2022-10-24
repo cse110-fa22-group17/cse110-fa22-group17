@@ -20,12 +20,7 @@
 
 ## Discussion Notes: 
    
-  
-  ### BrainStorm Acitivity:
-   - **Figure out the application to the project.**
-   - **Figure out the what we want to implement.**
-   - **Finialize a document after the brainstorm activity.**
-   - **Focus on the idea first, not the tools.**
+ [brainstorm notes](group17-brainstorm.pdf)
 
 ## TODO List:
    - **Project Pitch**
