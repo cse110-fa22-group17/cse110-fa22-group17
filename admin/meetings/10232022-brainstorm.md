@@ -28,5 +28,7 @@
    - **Focus on the idea first, not the tools.**
 
 ## TODO List:
+   - **Project Pitch**
+   - **Project Roadmap**
  
 
