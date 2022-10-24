@@ -15,8 +15,8 @@
 - [x] Yuheng
 
 ## Agenda:
-  -- **Brainstorm Activity**
-  -- **Assign Roles**
+  - **Brainstorm Activity**
+  - **Assign Roles**
 
 ## Discussion Notes: 
    
