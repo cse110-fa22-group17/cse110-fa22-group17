@@ -4,18 +4,19 @@
 
 ## Member Attendance:
 - [x] Alex
-- [x] Aiden
+- [ ] Aiden
 - [x] Alan
 - [x] Alwin
 - [x] Katherine
-- [x] Raon
+- [ ] Raon
 - [x] Sameer
-- [x] Sohil
+- [ ] Sohil
 - [x] Yiyang
 - [x] Yuheng
 
 ## Agenda:
- 
+  Brainstorm Activity
+  Assign Roles
 
 ## Discussion Notes: 
  
