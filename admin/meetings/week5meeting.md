@@ -16,7 +16,7 @@
 
 ## Agenda:
   ### Introduction to Pitch document
-  ### 
+  ### Discuss if we need to move the weekly meeting to Mon or Tue.
 
 ## Discussion Notes: 
   ### Improve Slack Communication:
