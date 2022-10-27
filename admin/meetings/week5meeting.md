@@ -15,17 +15,17 @@
 - [x] Yuheng
 
 ## Agenda:
-  ### Introduction to Pitch document
-  ### Discuss if we need to move the weekly meeting to Mon or Tue.
+  ### Introduction to Pitch document.
+  ### Schedule of weekly meeting.
 
 ## Discussion Notes: 
-  ### Improve Slack Communication:
-  - ****
-  - ****
+ - **People will be divided into two groups.**
+ - **Do the pitch meeting with TA before coding starts.**
+ - **Do the first pitch meeting early so that **
   
-  ### BrainStorm Acitivity:
-   - **Figure out the application to the project.**
+ 
    
 
 ## TODO List:
-  ****
+ - **Fill out the when2meet to decide new weekly meeting schedule**
+ - **Finalize the pitch documnet**
