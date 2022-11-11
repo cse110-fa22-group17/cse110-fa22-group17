@@ -1,4 +1,4 @@
-name: ESLint
+name: Linting (ESLint)
 
 on: [pull_request]
 
