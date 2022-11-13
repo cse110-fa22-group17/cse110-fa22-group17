@@ -1,0 +1,25 @@
+{
+  "name": "cse110-fa22-group17",
+  "version": "1.0.0",
+  "description": "[Team Page](https://github.com/cse110-fa22-group17/cse110-fa22-group17/blob/main/admin/team.md)",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "lint": "eslint .",
+    "url": "git+https://github.com/cse110-fa22-group17/cse110-fa22-group17.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cse110-fa22-group17/cse110-fa22-group17/issues"
+  },
+  "homepage": "https://github.com/cse110-fa22-group17/cse110-fa22-group17#readme",
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "jest": "^29.3.1"
+  }
+}
