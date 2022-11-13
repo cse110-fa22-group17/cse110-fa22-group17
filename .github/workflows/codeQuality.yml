@@ -1,7 +1,7 @@
 name: Code Quality (Codacy)
 
 on: 
-  pull_requests:
+  pull_request:
   push:
     branches:
       - master
