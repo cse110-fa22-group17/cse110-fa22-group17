@@ -1,14 +1,11 @@
-name: Lint and Test
+name: Lint
 
 on: 
   pull_request:
-  push:
-    branches:
-      - master
 
 jobs:
   standard-checks:
-    name: Lint and Test
+    name: Lint
     runs-on: ubuntu-latest
 
     steps:
@@ -21,6 +18,3 @@ jobs:
         
       - name: Run ESlint
         run: npm run lint
-
-      - name: Run Jest
-        run: npm run test
