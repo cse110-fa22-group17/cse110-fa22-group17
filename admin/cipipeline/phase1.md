@@ -9,19 +9,17 @@
 
 - ESLint 
   - Static code analysis tool for identifying problematic patterns found in JavaScript code
-  - Linting will run on pull requests/push to master
+  - Linting will run on pull requests
 
 - Codacy
   - Automated code analysis/quality tool that helps ship better software, faster
     - Analyzes each commit or pull request by running all supported static code analysis tools for the languages found in your repository.
-    - Prints the analysis results on the console, which is visible on the GitHub Action's workflow panel.
-    - Fails the workflow if it finds at least one issue in your code.
-    - Codacy dashboard also goes into depth about analysis.
-  - Code quality checks will run on pull requests/push to master
+    - Codacy dashboard also goes into depth about code analysis.
+  - Code quality checks will only reflect code on the main branch
 
 - Jest
   - JavaScript testing framework 
-  - Unit testing will run on pull requests/push to master
+  - Unit testing will run on pull requests to the main branch
 
 ## What is planned (in progress)
 - Jest
