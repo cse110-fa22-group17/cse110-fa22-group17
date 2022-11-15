@@ -17,11 +17,12 @@
 ## Agenda:
   Sprint review
 ## Review: 
- - **CI-pipelines set up by Alex**
+ - **CI-pipelines set up**
  - **More streamlined workflow set up on GitHub**
- - **HTML files are still being work on still need to work on the stylesheet.**
+ - **HTML files are still being work on - Good progress**
+ - **More work on the stylesheet needs to be done.**
  - **Backend work needs to start and pick up the pace**
- - **High Fidelity Wireframes done by Alwin**
+ - **High Fidelity Wireframes done**
  - **Brief overview given regarding databases and API: Firebase and Eventmaster**
   
  
