@@ -1,6 +1,6 @@
 # CSE110-FA22-GROUP17
 ## Meeting Topic: Weekly meeting
-### 10/26/2022 
+### 11/13/2022 
 
 ## Member Attendance:
 - [x] Alex
