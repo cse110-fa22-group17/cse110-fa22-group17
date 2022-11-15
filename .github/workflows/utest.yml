@@ -1,0 +1,22 @@
+name: Test
+
+on: 
+  pull_request:
+    branches: 
+      - main
+
+jobs:
+  standard-checks:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+
+      - name: Install packages
+        run: npm ci
+
+      - name: Run Jest
+        run: npm run test
