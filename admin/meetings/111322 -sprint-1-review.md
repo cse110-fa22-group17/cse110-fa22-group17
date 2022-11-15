@@ -29,5 +29,5 @@
    
 
 ## TODO List:
- - **Finish up HSS styling sheet**
+ - **Finish up CSS styling sheet**
  - **Get the backend work going**
