@@ -33,7 +33,7 @@ class EventCard extends HTMLElement {
         const eventTitle = document.createElement("p");
         eventTitle.classList.add("title");
         eventTitle.textContent = getTitle(data);
-        card.appendChild(recipeTitle);
+        card.appendChild(eventTitle);
 
         const viewButton = document.createElement("button");
         viewButton.textContent = "View Event";
