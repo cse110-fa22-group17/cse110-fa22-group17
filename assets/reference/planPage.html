@@ -6,14 +6,15 @@
         <link rel="stylesheet" href="/assets/styles/style.css">
         <script src="/assets/scripts/main.js" type="text/javascript"></script>
     </head>
+
     <body>
-        
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="close-btn" onclick="toggleSide()"><img src="/assets/images/Close.png" alt="Close"></a>
             <a href="/assets/reference/homePage.html" class="side"><img class="img-btn" src="/assets/images/Home.png">Home</a>
             <a href="/assets/reference/eventsPage.html" class="side"><img class="img-btn" src="/assets/images/Calendar.png">Events</a>
             <a href="/assets/reference/settingsPage.html" class="side"><img class="img-btn" src="/assets/images/Setting.png">Settings</a>
         </div>
+
         <div id="main" class="main">
             <!--Menu icon opens sidebar when clicked-->
             <button class="open-btn" onclick="toggleSide()"><img class="menu img-btn" src="/assets/images/Menu.png" alt="Menu"></button>
@@ -23,8 +24,67 @@
                 <a href="/assets/reference/likesPage.html"><img class="util img-btn" src="/assets/images/Heart.png" alt="Likes"></a>
                 <a href="/assets/reference/planPage.html"><img class="util img-btn" src="/assets/images/Add.png" alt="Plan Event"></a>
             </util>
-            
             <h1>Event Plan Page</h1>
         </div>
+
+        <form id="new-event">
+            <fieldset>
+                <legend>
+                    <h2>Header Image</h2>
+                </legend>
+                <label for="img">Select Event Image:
+                    <input type="file" id="img" name="img" accept="image/*">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                    <h2>Information</h2>
+                </legend>
+                <label for="e-title">Event Title:
+                    <input type="text" id="eTitle" name="eTitle" required>
+                </label>
+                <label for="e-org">Event Organizer:
+                    <input type="text" id="eOrg" name="eOrg" required>
+                </label>
+                <label for="e-desc">Event Description:
+                    <input type="text" id="eDesc" name="eDesc" required>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                    <h2>Location</h2>
+                </legend>
+                <!-- Add event listener to change text prompt -->
+                <button type="button">In-person event</button>
+
+                <!-- Add event listener to change text prompt -->
+                <button type="button">Remote event</button>
+
+                <!-- (TEXT) dynamically changes -->
+                <label for="e-medium"> (TEXT)
+                    <input type="text" id="eMedium" name="eMedium" required>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                    <h2>Date and Time</h2>
+                </legend>
+                <div>
+                    <label for="meeting-time">Event Starts:
+                        <input type="datetime-local" id="meeting-time">
+                    </label>
+                </div>
+                <div>
+                    <label for="meeting-time">Event Ends:
+                        <input type="datetime-local" id="meeting-time">
+                    </label>
+                </div>
+            </fieldset>
+
+            <button type="submit">Add Event</button>
+          </form>
     </body>
 </html>
