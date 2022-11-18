@@ -27,9 +27,13 @@ class EventCard extends HTMLElement {
             display: grid;
             grid-template-rows: 80px 50px 15px 18px 15px 36px;
             height: 200px;
-            row-gap: 5px;
             padding: 0px 20px 20px 20px;
-            width: 178px;
+            width: 25%;
+            float: left;
+            column-gap: 10%;
+            row-gap: 10%;
+            margin-right: 40px;
+            margin-bottom: 20px;
         }
 
         article p {
