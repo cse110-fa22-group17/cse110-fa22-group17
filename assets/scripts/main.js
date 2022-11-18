@@ -76,7 +76,7 @@ function convertForm2JSON(formData) {
  * Adds the necesarry event handlers to <form> 
  */
 function initFormHandler() {
-  let main = document.querySelector('.display-event main')
+  let main = document.querySelector('main')
   let eventForm = document.querySelector('#event-form');
 
   eventForm.addEventListener('submit', e => {
