@@ -8,8 +8,8 @@ body {
     background-color: #AF85F4;
 }
 h1 {
-    position: relative;
-    left: 18px;
+    position:relative;
+    text-align: center;
 }
 
 .main {
@@ -73,8 +73,9 @@ h1 {
 .planned-event {
     display: inline-block;
     position: relative;
+    height: 200px;
     top: 120px;
-    left: 45%;
+    left:19%;
     transform: translate(-50%, -50%);
 }
 .search-form {
@@ -177,10 +178,10 @@ h1 {
     transition: all 0.3s ease;
 }
 
-.display-event h3{
+.display-event{
     position: relative;
-    top: 100px;
-    left: 36%;
+    height: 20px;
+    /*left: 0%;*/
 }
 
 /* Settings Page Setup */

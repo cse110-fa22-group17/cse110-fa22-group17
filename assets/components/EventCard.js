@@ -26,9 +26,9 @@ class EventCard extends HTMLElement {
             border-radius: 8px;
             display: grid;
             grid-template-rows: 80px 50px 15px 18px 15px 36px;
-            height: auto;
+            height: 200px;
             row-gap: 5px;
-            padding: 0 20px 20px 20px;
+            padding: 0px 20px 20px 20px;
             width: 178px;
         }
 
@@ -39,13 +39,15 @@ class EventCard extends HTMLElement {
           }
 
           article button {
-            border: 1px solid #ccccd8;
-            background-color: #fff;
+            align_items:bottom;
+            border: 1px solid #414BB2;
+            background-color: #414BB2;
             border-radius: 14px;
-            color: #000;
+            color: white;
             cursor: pointer;
             font-size: 20px;
             padding: 5px 20px;
+            top:50%;
           }
         
         `;
