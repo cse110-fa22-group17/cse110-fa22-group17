@@ -72,6 +72,7 @@ function convertForm2JSON(formData) {
 function initFormHandler() {
   let main = document.querySelector('main')
   let eventForm = document.querySelector('#event-form');
+  let cancelbtn = document.querySelector('#cancelbtn');
 
   eventForm.addEventListener('submit', e => {
     e.preventDefault;
@@ -81,9 +82,14 @@ function initFormHandler() {
     let eventCard = document.createElement('event-card');
     eventCard.data = eventObj;
     main.append(eventCard);
-    
     let localEvents = getEventFromStorage();
     localEvents.push(eventObj);
     saveEventsToStorage(localEvents);
+    
+  });
+
+  cancelbtn.addEventListener('click', f => {
+    f.preventDefault;
+    window.location.href ="/assets/reference/homePage.html";
   });
 }

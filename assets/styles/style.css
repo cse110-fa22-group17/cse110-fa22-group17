@@ -8,8 +8,8 @@ body {
     background-color: #AF85F4;
 }
 h1 {
-    position:relative;
     text-align: center;
+    margin-left: 5cm;
 }
 
 .main {
@@ -23,6 +23,27 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
+.web-banner {
+    background-color: #414BB2;
+    padding: 1%;
+}
+
+.bannerLogo {
+    width: 4%;
+    margin-left: 13.5cm;
+    margin-top: -3px;
+    float:left;
+}
+
+.banner-title {
+    font-size: 35px;
+    height: 100px;
+}
+
+.homeLink {
+    color: black;
+    text-decoration: none;
+}
 .login-form {
     width: 400px;
     min-height: 60vh;
@@ -35,6 +56,7 @@ h1 {
     display: block;
     margin: auto;
     margin-bottom: 20px;
+    margin-top: 40px;
     width: 50%;
 }
 .login-input {
@@ -181,7 +203,6 @@ h1 {
 .display-event{
     position: relative;
     height: 20px;
-    /*left: 0%;*/
 }
 
 /* Settings Page Setup */
@@ -192,13 +213,16 @@ h1 {
     width: 50vh;
     text-align: center;
 }
+
+
 .settings-page img {
     scale: 1.4;
+    padding-right: 1.5cm;
+    margin-top: 1cm;
 }
-.settings-page h1 {
-    position: absolute;
-    top: 16%;
-    left: 50%;
+.titlepage {
+    float:left;
+    padding-right: 5cm;
     transform: translate(-50%, -50%);
     font-size: 42px;
 }
@@ -208,6 +232,7 @@ h1 {
     margin-top: 25%;
 }
 .set-input {
+    background-color: #414BB2;
     font-size: 14px;
     margin-bottom: 4px;
     border: none;
@@ -233,6 +258,54 @@ h1 {
     cursor: pointer;
 }
 
+/* Add Custom Event Page Setup */
+#event-form {
+    background-color: #AF85F4;
+}
+
+.eventDetails {
+    border: 10px solid #414BB2;
+    text-align: center;
+}
+
+.header {
+    border: 10px solid #414BB2;
+}
+
+.eventimg {
+    float: left;
+    width: 20%;
+    margin-right: 20px;
+}
+.eventimg1 {
+    float: right;
+    width: 20%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.add-event-btns {
+    background-color: #414BB2;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 40px;
+    line-height: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    outline: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    text-align: center;
+}
+.add-event-btns:hover,
+.add-event-btns:focus {
+    background-color: #21287e;
+}
+
+/* Misc */
 .wrapper {
     display: grid;
     grid-template-areas: 
