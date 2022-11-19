@@ -4,7 +4,9 @@
         <title>TCP Event Planning Page</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="/assets/styles/style.css">
+        <script src="/assets/scripts/pageHelper.js" type="text/javascript"></script>
         <script src="/assets/scripts/main.js" type="text/javascript"></script>
+        <script src="/assets/scripts/eDataHelper.js" type="text/javascript"></script>
     </head>
 
     <body>
@@ -74,12 +76,12 @@
                 </legend>
                 <div>
                     <label for="meeting-time">Event Starts:
-                        <input type="datetime-local" id="meeting-time">
+                        <input type="datetime-local" id="startTime" name="startTime">
                     </label>
                 </div>
                 <div>
                     <label for="meeting-time">Event Ends:
-                        <input type="datetime-local" id="meeting-time">
+                        <input type="datetime-local" id="endTime" name="endTime">
                     </label>
                 </div>
             </fieldset>

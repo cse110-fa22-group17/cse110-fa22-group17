@@ -1,6 +1,6 @@
 // Webcomponent for event cards on the homepage
 
-import { getImg, getTitle } from "../scripts/eDataHelper.js";
+import { getImg, getTitle, getEnd, getStart, getLocation } from "../scripts/dataHelper.js";
 
 class EventCard extends HTMLElement {
     constructor() {
@@ -26,9 +26,9 @@ class EventCard extends HTMLElement {
             border-radius: 8px;
             display: grid;
             grid-template-rows: 80px 50px 15px 18px 15px 36px;
-            height: 200px;
+            height: 300px;
             padding: 0px 20px 20px 20px;
-            width: 25%;
+            width: 15%;
             float: left;
             column-gap: 10%;
             row-gap: 10%;
@@ -40,6 +40,18 @@ class EventCard extends HTMLElement {
             color: #000;
             font-size: 20px;
             text-align: center;
+          }
+
+          article h1 {
+            color: #000;
+            text-align: center;
+          }
+
+          article img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
           }
 
           article button {
@@ -62,6 +74,8 @@ class EventCard extends HTMLElement {
         Event Card components below
             event image
             event title
+            event dates
+            event location
             button to view event
         */
         const eventImg = document.createElement("img");
@@ -69,11 +83,21 @@ class EventCard extends HTMLElement {
         eventImg.alt = getTitle(data)
         card.appendChild(eventImg);
 
-        const eventTitle = document.createElement("p");
+        const eventTitle = document.createElement("h1");
         eventTitle.classList.add("title");
         eventTitle.textContent = getTitle(data);
         card.appendChild(eventTitle);
         
+        const eventDates = document.createElement("p");
+        eventDates.classList.add("dates");
+        eventDates.textContent = getStart(data) + ' ' + getEnd(data);
+        card.appendChild(eventDates);
+        
+        const eventLocation = document.createElement("p");
+        eventLocation.classList.add("location");
+        eventLocation.textContent = getLocation(data);
+        card.appendChild(eventLocation);
+
         const viewButton = document.createElement("button");
         viewButton.textContent = "View Event";
         card.appendChild(viewButton);

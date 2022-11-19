@@ -1,9 +1,3 @@
-/* functions for sidebar menu open/close */
-function toggleSide() {
-  document.getElementById("mySidebar").classList.toggle("active");
-  document.getElementById("main").classList.toggle("active");
-}
-
 window.addEventListener('DOMContentLoaded', init);
 
 // Starts the program, all function calls trace back here
@@ -83,7 +77,7 @@ function initFormHandler() {
     e.preventDefault;
     const formData = new FormData(eventForm);
     let eventObj = convertForm2JSON(formData);
-    
+
     let eventCard = document.createElement('event-card');
     eventCard.data = eventObj;
     main.append(eventCard);
