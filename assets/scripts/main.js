@@ -6,7 +6,7 @@ function init() {
   addEventsToDoc(events);
   if (document.querySelector('#event-form')) {
     initFormHandler();
-  };
+  }
 }
 
 
