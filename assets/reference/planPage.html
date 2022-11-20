@@ -4,8 +4,9 @@
         <title>TCP Event Planning Page</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="/assets/styles/style.css">
-        <script src="/assets/scripts/main.js" type="text/javascript"></script>
-        <script src="/assets/scripts/dataHelper.js" type="text/javascript"></script>
+        <script src="/assets/scripts/planPageHelper.js" type="module"></script>
+        <script src="/assets/scripts/dataHelper.js" type="module"></script>
+        <script src="/assets/scripts/main.js" type="module"></script>
     </head>
 
     <body>
@@ -24,17 +25,17 @@
             <h1>Add Custom Event</h1>
         </div>
 
-        <form id="event-form">
-            <fieldset class="header"> <b>
-                <img class="eventimg "src="/assets/images/no-image.png" alt="Event image">
-                <legend>
-                    <h2>Header Image</h2>
-                </legend>
-                <label for="img">Select Event Image:
-                    <input type="file" id="img" name="img" accept="image/*">
-                </label>
-            </fieldset>
+        <fieldset class="header"> <b>
+            <img id ='eImg' class="eventimg" src="/assets/images/no-image.png" alt="Event image">
+            <legend>
+                <h2>Header Image</h2>
+            </legend>
+            <label for="img">Select Event Image:
+                <input type="file" id="imgFile" name="imgFile" accept="image/*">
+            </label>
+        </fieldset>
 
+        <form id="event-form">
             <fieldset class="eventDetails">
                 <img class="eventimg "src="/assets/images/gold_paint.png" alt="Event image">
                 <img class="eventimg1 "src="/assets/images/gold_paint.png" alt="Event image">

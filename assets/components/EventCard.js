@@ -78,9 +78,11 @@ class EventCard extends HTMLElement {
             event location
             button to view event
         */
+
         const eventImg = document.createElement("img");
-        eventImg.src = getImg(data)
-        eventImg.alt = getTitle(data)
+        // Call getImg via dataHelper when correctly implemented
+        eventImg.src = "../images/Clueless.png"; 
+        eventImg.alt = getTitle(data);
         card.appendChild(eventImg);
 
         const eventTitle = document.createElement("h1");
