@@ -5,11 +5,6 @@
  * In planPage.html the file submission is not included in the event-form to prevent string conversion
  * This might help with implementation: https://web.dev/read-files/
 */
-const eventImg = document.querySelector('#eImg');
-eventImg.addEventListener('change', (event) => {
-    console.log(event.target.files);
-});
-
 export function getImg(data) {
     const reader = new FileReader();
     reader.addEventListener('load', (event) => {

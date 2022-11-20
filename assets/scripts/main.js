@@ -4,7 +4,9 @@ window.addEventListener('DOMContentLoaded', init);
 function init() {
   let events = getEventFromStorage();
   addEventsToDoc(events);
-  initFormHandler();
+  if (document.querySelector('#event-form')) {
+    initFormHandler();
+  };
 }
 
 
