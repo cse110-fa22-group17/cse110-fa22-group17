@@ -33,3 +33,5 @@
  - **Specific Event page**
  - **Edit/delete feature**
  - **Popup for successful/fail add/edit/delete of events**
+ - **Testing**
+ - **User database (Stretch)**
