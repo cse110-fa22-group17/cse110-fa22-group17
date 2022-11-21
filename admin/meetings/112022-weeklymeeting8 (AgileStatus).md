@@ -18,14 +18,10 @@
   Agile Status Vid
   Sprint Review
 ## Review: 
- - **Website logo and banner designed**
- - **Finished implementing core features (c r u d)**
- - **CSS is still being worked on**
- - **Work started on popup page**
- - **Adding images for events (wip)**
+ - **Record the agile status video**
+ - **Do the sprint review (see sprint review file for more information)**
+ - **Discuss future plans for next sprint and beyond**
  
-   
-
 ## TODO List:
  - **View specific event page**
  - **Allow editing/deletion of events in specific event page**
