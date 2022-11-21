@@ -35,7 +35,7 @@
             </label>
         </fieldset>
 
-        <form id="event-form">
+        <form id="event-form" >
             <fieldset class="eventDetails">
                 <img class="eventimg "src="/assets/images/gold_paint.png" alt="Event image">
                 <img class="eventimg1 "src="/assets/images/gold_paint.png" alt="Event image">
@@ -73,12 +73,33 @@
                         <input type="datetime-local" id="endTime" name="endTime">
                     </label>
                 </div></b>
+            
+            
+            
+            
             </fieldset>
-            <button type="submit" class="add-event-btns">Add Event</button>
+            <button type="submit" id="added" class="add-event-btns">Add Event</button>
             <button type="click" id="cancelbtn" class="add-event-btns" style="background-color:red">Cancel</button>
+       
+        <!-- popup window -->
+         <div class="popWin">
+            <div class="window-content">
+                <img src = "/assets/images/Clueless.png" style="position:absolute; left:180px; top: 100px;" >
+                
+                <p id="notice" >Event Successfully Added</p>
+            
+            <div class="popButton">
+                <button type="click" id="ok" style="position:absolute; left:215px; top:250px" > OK </button>
+            </div>
+            
+            </div>
+         </div>
+
+
         </form>
         <main>
             
+            </form>
         </main>
     </body>
 </html>
