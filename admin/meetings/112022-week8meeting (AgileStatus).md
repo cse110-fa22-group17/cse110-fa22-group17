@@ -15,9 +15,9 @@
 - [x] Yuheng
 
 ## Agenda:
-  **Agile Status Vid**
-  **Sprint Review**
-  
+ - Record Agile Video
+ - Sprint Review
+
 ## Review: 
  - **Record the agile status video**
  - **Do the sprint review (see sprint review file for more information)**
