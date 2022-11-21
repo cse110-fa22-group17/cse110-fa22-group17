@@ -1,0 +1,370 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #AF85F4;
+}
+h1 {
+    text-align: center;
+    margin-left: 5cm;
+}
+
+.main {
+    min-width: 650px;
+}
+
+.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.web-banner {
+    background-color: #414BB2;
+    padding: 1%;
+}
+
+.bannerLogo {
+    width: 4%;
+    margin-left: 13.5cm;
+    margin-top: -3px;
+    float:left;
+}
+
+.banner-title {
+    font-size: 35px;
+    height: 100px;
+}
+
+.homeLink {
+    color: black;
+    text-decoration: none;
+}
+.login-form {
+    width: 400px;
+    min-height: 60vh;
+    border: 0;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+}
+.logoImage {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    width: 50%;
+}
+.login-input {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    background-color: #C5ACEF;
+}
+.submit-btn {
+    display: inline-block;
+    color: #EEEEEE;
+    font-size: 14px;
+    background-color: #414BB2;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-left: 12px;
+    margin-right: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 40%;
+}
+
+.links {
+    text-align: center;
+}
+.links a {
+    font-size: 12px;
+    color: black;
+}
+
+.planned-event {
+    display: inline-block;
+    position: relative;
+    height: 200px;
+    top: 120px;
+    left:19%;
+    transform: translate(-50%, -50%);
+}
+.search-form {
+    position: relative;
+    width: 300px;
+    height: 30px;
+    display: inherit;
+    margin-right: 50px;
+}
+.search-bar {
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+.search-form img {
+    position: absolute;
+    width: 20px;
+    top: 9px;
+    right: 10px;
+    margin: 0;
+}
+.plan-event-btn {
+    background-color: #414BB2;
+    border-radius: 8px;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 40px;
+    line-height: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    outline: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    text-align: center;
+}
+.plan-event-btn:hover,
+.plan-event-btn:focus {
+    background-color: #21287e;
+}
+
+.img-btn:hover {
+    -webkit-filter: invert(0.3);
+    filter: invert(0.3);
+    cursor: pointer;
+}
+.sidebar {
+    height: 150%;
+    width: 0;
+    position: fixed;
+    top: -50px;
+    left: 0;
+    overflow: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 24px;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+    color: black;
+}
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.sidebar img {
+    scale: 0.7;
+    vertical-align: middle;
+}
+.open-btn {
+    border: none;
+    border-radius: 5px;
+    background-color: #AF85F4;
+}
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+#mySidebar.active {
+    width: 250px;
+}
+#main.active {
+    margin-left: 250px;
+}
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+.util {
+    float: right;
+    transition: all 0.3s ease;
+}
+
+.display-event{
+    position: relative;
+    height: 20px;
+}
+
+/* Settings Page Setup */
+.settings-page {
+    display:block;
+    position:relative;
+    margin: auto;
+    width: 50vh;
+    text-align: center;
+}
+
+
+.settings-page img {
+    scale: 1.4;
+    padding-right: 1.5cm;
+    margin-top: 1cm;
+}
+.titlepage {
+    float:left;
+    padding-right: 5cm;
+    transform: translate(-50%, -50%);
+    font-size: 42px;
+}
+.setting {
+    text-align: left;
+    font-size: 18px;
+    margin-top: 25%;
+}
+.set-input {
+    background-color: #414BB2;
+    font-size: 14px;
+    margin-bottom: 4px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+.save-btn {
+    color: #EEEEEE;
+    font-size: 14px;
+    background-color: #414BB2;
+    margin-top: 30px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 20%;
+}
+.save-btn:hover,
+.save-btn:focus {
+    background-color: #21287e;
+    cursor: pointer;
+}
+
+/* Add Custom Event Page Setup */
+#event-form {
+    background-color: #AF85F4;
+}
+
+.eventDetails {
+    border: 10px solid #414BB2;
+    text-align: center;
+}
+
+.header {
+    border: 10px solid #414BB2;
+}
+
+.eventimg {
+    float: left;
+    width: 20%;
+    margin-right: 20px;
+}
+.eventimg1 {
+    float: right;
+    width: 20%;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.add-event-btns {
+    background-color: #414BB2;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    cursor: pointer;
+    height: 40px;
+    line-height: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    outline: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    text-align: center;
+}
+.add-event-btns:hover,
+.add-event-btns:focus {
+    background-color: #21287e;
+}
+
+/* Misc */
+.wrapper {
+    display: grid;
+    grid-template-areas: 
+        'header header header header header'
+        'main main main icon1 icon2'
+        'desc desc desc icon1 icon2';
+    padding: 10px;
+    justify-content: space-between;
+    width: 50vmax;
+    height: 20vmax;
+}
+.box {
+    border: 1px solid black;
+}
+.image {
+    background-color: lightgray;
+    display: block;
+    margin: 0 auto;
+    grid-area: header;
+}
+
+/* style for the pop-up window */
+.popWin {
+   
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.0);
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+     
+}
+
+.window-content {
+    width: 500px;
+    height: 300px;
+    background-color: rgb(33, 4, 138);
+    border-radius: 4px;
+    /* justify-content: center; */
+    position: fixed;
+    font-size: 60;
+    
+}
+
+#notice {
+
+   justify-content: center;
+   text-align: center;
+   color: white;
+} 
+
+#ok {
+
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    width: 15%;
+}
+
+/* end for the style of pop-up window */
