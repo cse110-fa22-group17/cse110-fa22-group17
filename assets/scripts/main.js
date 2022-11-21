@@ -69,25 +69,43 @@ function convertForm2JSON(formData) {
 
 
 /**
- * Adds the necesarry event handlers to <form> 
+ * Adds the necessary event handlers to <form> 
  */
 function initFormHandler() {
   let main = document.querySelector('main')
   let eventForm = document.querySelector('#event-form');
   let cancelbtn = document.querySelector('#cancelbtn');
 
+  const imgFile = document.querySelector('#imgFile');
+  const eImg = document.querySelector('#eImg');
+  let dataURL;
+
+  // Displays image file via dataurl and saves it to be stored locally when form is submitted
+  imgFile.addEventListener('change', (event) => {
+    const file = imgFile.files[0];
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+        eImg.src = reader.result;
+        dataURL = reader.result;
+    });
+    reader.readAsDataURL(file);
+  });
+
+  // Creates event-card from form data and saves it locally
   eventForm.addEventListener('submit', e => {
     e.preventDefault;
     const formData = new FormData(eventForm);
     let eventObj = convertForm2JSON(formData);
 
+    eventObj.eImg = dataURL;
+
     let eventCard = document.createElement('event-card');
     eventCard.data = eventObj;
     main.append(eventCard);
+    
     let localEvents = getEventFromStorage();
     localEvents.push(eventObj);
     saveEventsToStorage(localEvents);
-    
   });
 
   cancelbtn.addEventListener('click', f => {
