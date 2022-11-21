@@ -15,13 +15,14 @@
 - [x] Yuheng
 
 ## Agenda:
-  Sprint review
-## Review: 
+  Weekly Discussion and Sprint review
+  
+## Discussion: 
  - **CI-pipelines set up**
  - **More streamlined workflow set up on GitHub**
  - **HTML files are still being work on - Good progress**
  - **More work on the stylesheet needs to be done.**
- - **Backend work needs to start and pick up the pace**
+ - **Backend work needs to start and pick up the pace - meeting between backend people should be arranged**
  - **High Fidelity Wireframes done**
  - **Brief overview given regarding databases and API: Firebase and Eventmaster**
   

@@ -80,8 +80,7 @@ class EventCard extends HTMLElement {
         */
 
         const eventImg = document.createElement("img");
-        // Call getImg via dataHelper when correctly implemented
-        eventImg.src = "../images/Clueless.png"; 
+        eventImg.src = getImg(data); 
         eventImg.alt = getTitle(data);
         card.appendChild(eventImg);
 

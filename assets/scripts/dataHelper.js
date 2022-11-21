@@ -1,16 +1,16 @@
 /**
  * Get the image of event.
  * 
- * It is not possible to directly convert a File object into JSON using JSON.stringify (it returns {})
- * In planPage.html the file submission is not included in the event-form to prevent string conversion
- * This might help with implementation: https://web.dev/read-files/
+ * Local storage only is able to store strings.
+ * It is not possible to directly convert a File object into a string using JSON.stringify (it returns {}).
+ * In planPage.html the file submission is not included in the event-form to prevent immediate string conversion.
+ * Need to convert File object to data url first, then it can be stringifyied.
 */
 export function getImg(data) {
-    const reader = new FileReader();
-    reader.addEventListener('load', (event) => {
-        data.push({eImg: event.target.result});
-    });
-    return data.eImg
+    if (data && data.eImg) {
+        return data.eImg;
+    }
+    return "";
 }
 
 /**
