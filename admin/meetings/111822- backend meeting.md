@@ -15,10 +15,9 @@
 - [x] Yuheng
 
 ## Agenda:
-  **Adjustments to homepage**
-  **Features and work left to implement**
-  **Division of Roles**
-  
+ -  **Adjustments to homepage**
+ -  **Features and work left to implement**
+ -  **Division of Roles**
   
 ## Outcome:
  - **List of features and work to be done compiled into a sticky note on Miro**
