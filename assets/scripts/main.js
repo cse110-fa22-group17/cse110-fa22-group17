@@ -77,10 +77,12 @@ function initFormHandler() {
   let cancelbtn = document.querySelector('#cancelbtn');
 
   eventForm.addEventListener('submit', e => {
-    e.preventDefault;
+    
+    e.preventDefault();
+    document.querySelector('.popWin').style.display = 'flex';
+    
     const formData = new FormData(eventForm);
     let eventObj = convertForm2JSON(formData);
-
     let eventCard = document.createElement('event-card');
     eventCard.data = eventObj;
     main.append(eventCard);
@@ -88,10 +90,37 @@ function initFormHandler() {
     localEvents.push(eventObj);
     saveEventsToStorage(localEvents);
     
+    consol.log('update log');
+    //document.querySelector('.popWin').style.display = 'flex';
+    
+    //popup();
   });
 
   cancelbtn.addEventListener('click', f => {
-    f.preventDefault;
+    f.preventDefault();
     window.location.href ="/assets/reference/homePage.html";
   });
 }
+
+//document.getElementById()
+// document.getElementById('added').addEventListener('click',function() {
+
+//   
+   
+// })
+
+//  function popup(){
+//   document.querySelector('.popWin').style.display = 'flex';
+//  }
+
+// document.querySelector('#event-form').addEventListener('submit', function(){
+//   document.querySelector('.popWin').style.display = 'flex';
+// })
+
+
+document.getElementById('ok').addEventListener('click',e => {
+   e.preventDefault();
+  //document.querySelector('.popWin').style.display = 'none';
+  window.location.href = "/assets/reference/homePage.html";
+
+})
