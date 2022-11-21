@@ -23,6 +23,11 @@
  - **Discuss future plans for next sprint and beyond**
  
 ## TODO List:
- - **View specific event page**
- - **Allow editing/deletion of events in specific event page**
- - **User profile database (stretch)**
+ - **Finish work on image upload**
+ - **Make the time for events cards more readable**
+ - **Search bar feature**
+ - **Specific Event page**
+ - **Edit/delete feature**
+ - **Popup for successful/fail add/edit/delete of events**
+ - **Testing**
+ - **User database (Stretch)**
