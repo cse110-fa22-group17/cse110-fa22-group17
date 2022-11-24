@@ -118,7 +118,7 @@ function initFormHandler() {
 
   cancelbtn.addEventListener('click', f => {
     f.preventDefault();
-    window.location.href ="/assets/reference/homePage.html";
+    window.location.href ="../homePage.html";
   });
 }
 
@@ -141,6 +141,6 @@ function initFormHandler() {
 document.getElementById('ok').addEventListener('click',e => {
    e.preventDefault();
   //document.querySelector('.popWin').style.display = 'none';
-  window.location.href = "/assets/reference/homePage.html";
+  window.location.href = "../homePage.html";
 
 })
