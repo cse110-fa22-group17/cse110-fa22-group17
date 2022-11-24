@@ -269,14 +269,15 @@ h1 {
 }
 
 .header {
-    border: 10px solid #414BB2;
     font-size: 20px;
     text-align: center;
+    border-color: #414BB2;
 }
 
 #header_img {
     font-size: 30px;
     text-align: center;
+    background-color: #414BB2;
 }
 .eventimg {
     display: block;
@@ -315,6 +316,7 @@ h1 {
     text-align: center;
     margin-top: 2cm;
     margin-bottom: 1cm;
+    background-color: #414BB2;
 }
 .add-event-btns {
     background-color: #414BB2;
