@@ -26,21 +26,19 @@
         </div>
 
         <fieldset class="header"> <b>
-            <img id ='eImg' class="eventimg" src="../images/no-image.png" alt="Event image">
             <legend>
-                <h2>Header Image</h2>
+                <h2 id="header_img">Header Image</h2>
             </legend>
-            <label for="img">Select Event Image:
+            <img id ='eImg' class="eventimg" src="../images/no-image.png" alt="Event image">
+            <div id="select_img" for="img">Select Event Image:
                 <input type="file" id="imgFile" name="imgFile" accept="image/*">
-            </label>
-        </fieldset>
+            </div>
 
         <form id="event-form" >
-            <fieldset class="eventDetails">
-                <img class="eventimg "src="../images/gold_paint.png" alt="Event image">
-                <img class="eventimg1 "src="../images/gold_paint.png" alt="Event image">
+                <img class="eventimg2 "src="../images/pinksplash.png" alt="Event image">
+                <img class="eventimg1 "src="../images/pinksplash.png" alt="Event image">
                 <legend>
-                    <h2>Event Details</h2>
+                    <h2 id="event_details">Event Details</h2>
                 </legend>
                 <label for="e-title">Title:
                     <input type="text" id="eTitle" name="eTitle" required>
@@ -52,13 +50,6 @@
                     <input type="text" id="eDesc" name="eDesc" required>
                 </label> <br><br>
 
-                <!-- Add event listener to change text prompt
-                <button style="background-color: #AF85F4" type="button">In-person event</button>
-
-                 Add event listener to change text prompt
-                <button type="button">Remote event</button>
-
-                (TEXT) dynamically changes -->
                 <label for="e-medium"> Location:
                     <input type="text" id="eMedium" name="eMedium" required>
                 </label> <br><br>
