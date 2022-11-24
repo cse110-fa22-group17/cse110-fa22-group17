@@ -28,6 +28,7 @@ h1 {
 .web-banner {
     background-color: #414BB2;
     text-align: center;
+    height: 100px;
 }
 
 .bannerLogo {
@@ -152,6 +153,7 @@ h1 {
     position: relative;
     height: 20px;
 }
+
 .sidebar {
     height: 150%;
     width: 0;
