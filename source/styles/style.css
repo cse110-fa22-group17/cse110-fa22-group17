@@ -294,18 +294,18 @@ h1 {
 .eventimg1 {
 
     float: right;
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    max-width: 30vw;
+    max-height: 40vh;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-    margin-left: 2cm;
 }
 
 .eventimg2 {
     float: left;
-    width: 500px;
-    height: 500px;
-    margin-right: 2cm;
+    width: 100%;
+    max-width: 30vw;
+    max-height: 40vh;
 }
 
 #event_details {
