@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title id = "specifc event" >Event  Page</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/assets/styles/style.css">
+        <script src="/assets/scripts/dataHelper.js" type="module"></script>
+        <script src="/assets/scripts/main.js" type="module"></script>
+        <style>
+            #edit_event {
+                background-color: #414BB2;
+                border: none;
+                padding: 100px 200px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 40px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+
+            #event_img_item {
+                border-radius: 50%;
+                background-color: #6e77d8;
+            }
+
+            #event_details_item{
+                background-color: #714eb3;
+            }
+
+            #event_description_item{
+                background-color: #714eb3;
+            }
+
+            .event_grid_item{
+                margin-left: 10%;
+                margin-top: 10%;
+                height:80%;
+                width:80%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="web-banner">
+            <!--Top banner -->
+            <a class= "homeLink" href="/assets/reference/homePage.html" class="home"><img class="bannerLogo" src="/assets/images/Logo.png" alt="Team Clueless Logo">
+            <b class="banner-title">Plangenix</b></a>
+        </div>
+        <div id="main" class="main">
+            <!--Util icons stay on top right corner-->
+            <util>
+                <a href="/assets/reference/profilePage.html"><img class="util img-btn" src="/assets/images/Profile.png" alt="Profile"></a>
+                <a href="/assets/reference/settingsPage.html"><img class="util img-btn" src="/assets/images/Setting.png" alt="Settings"></a>
+                <a href="/assets/reference/planPage.html"><img class="util img-btn" src="/assets/images/Add.png" alt="Plan Event"></a>
+            </util>
+            <h1>Specific event</h1>
+        </div>
+        <div id = specific_event_grid>
+
+            <div id = event_img_item class = event_grid_item >
+                <img id = img src="/assets/images/Clueless.png" alt="">
+            </div>
+
+            <div id = event_button_item class = event_grid_item >
+                <button id = edit_event> Edit Event</button>
+            </div>
+
+            <div id = event_details_item class = event_grid_item >
+                <p id = title>  </p>
+                <p id = start_date > </p>
+                <p id = end_date>  </p>
+                <p id = organization> </p>
+                <p id = location> </p>
+            </div>
+
+            <div id = event_description_item class = event_grid_item >
+                <h3> Event Description : </h3>
+                <p id = description> </p>
+            </div>
+            
+        </div>
+
+    </body>
+</html>
