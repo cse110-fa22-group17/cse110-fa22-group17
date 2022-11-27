@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TCP Event Planning Page</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../styles/style.css">
+        <script src="../scripts/planPageHelper.js" type="module"></script>
+        <script src="../scripts/dataHelper.js" type="module"></script>
+        <script src="../scripts/main.js" type="module"></script>
+    </head>
+
+    <body>
+         <!--webpage banner section-->
+        <div class="web-banner">
+            <a class= "homeLink" href="../homePage.html" class="home"><img class="bannerLogo" src="../images/Logo.png" alt="Team Clueless Logo">
+            <b class="banner-title">Plangenix</b></a>
+        </div>
+        <div id="main" class="main">
+            <!--Util icons stay on top right corner-->
+            <util>
+                <a href="../reference/profilePage.html"><img class="util img-btn" src="../images/Profile.png" alt="Profile"></a>
+                <a href="../reference/settingsPage.html"><img class="util img-btn" src="../images/Setting.png" alt="Settings"></a>
+                <a href="../reference/planPage.html"><img class="util img-btn" src="../images/Add.png" alt="Plan Event"></a>
+            </util>
+            <h1>Add Custom Event</h1>
+        </div>
+
+        <fieldset class="header"> <b>
+            <legend>
+                <h2 id="header_img">Header Image</h2>
+            </legend>
+            <img id ='eImg' class="eventimg" src="../images/no-image.png" alt="Event image">
+            <div id="select_img" for="img">Select Event Image:
+                <input type="file" id="imgFile" name="imgFile" accept="image/*">
+            </div>
+
+        <form id="event-form" >
+                <img class="eventimg2 "src="../images/pinksplash.png" alt="Event image">
+                <img class="eventimg1 "src="../images/pinksplash.png" alt="Event image">
+                <legend>
+                    <h2 id="event_details">Event Details</h2>
+                </legend>
+                <label for="e-title">Title:
+                    <input type="text" id="eTitle" name="eTitle" required>
+                </label> <br><br>
+                <label for="e-org">Organizer:
+                    <input type="text" id="eOrg" name="eOrg" required>
+                </label> <br><br>
+                <label for="e-desc">Description:
+                    <input type="text" id="eDesc" name="eDesc" required>
+                </label> <br><br>
+
+                <label for="e-medium"> Location:
+                    <input type="text" id="eMedium" name="eMedium" required>
+                </label> <br><br>
+
+                <div>
+                    <label for="meeting-time">Start Time:
+                        <input type="datetime-local" id="startTime" name="startTime">
+                    </label>
+                </div> <br>
+                <div>
+                    <label for="meeting-time">End Time:
+                        <input type="datetime-local" id="endTime" name="endTime">
+                    </label>
+                </div></b>
+            
+            
+            
+            
+            </fieldset>
+            <button type="submit" id="added" class="add-event-btns">Add Event</button>
+            <button type="click" id="cancelbtn" class="add-event-btns" style="background-color:red">Cancel</button>
+       
+        <!-- popup window -->
+         <div class="popWin">
+            <div class="window-content">
+                <img src = "../images/Clueless.png" style="position:absolute; left:180px; top: 100px;" >
+                
+                <p id="notice" >Event Successfully Added</p>
+            
+            <div class="popButton">
+                <button type="click" id="ok" style="position:absolute; left:215px; top:250px" > OK </button>
+            </div>
+            
+            </div>
+         </div>
+
+
+        </form>
+        <main>
+            
+            </form>
+        </main>
+    </body>
+</html>

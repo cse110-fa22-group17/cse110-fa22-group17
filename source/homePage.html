@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title id = home>TCP Home Page</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./styles/style.css">
+          <!-- Event Card Custom Element -->
+        <script src="./components/EventCard.js" type="module"></script>
+        <script src="./scripts/dataHelper.js" type="module"></script>
+        <script src="./scripts/main.js" type="module"></script>
+    </head>
+    <body>
+        <!--main HTML section-->
+        <!--webpage banner section-->
+        <div class="web-banner">
+            <a class= "homeLink" href="./homePage.html" class="home"><img class="bannerLogo" src="./images/Logo.png" alt="Team Clueless Logo">
+            <b class="banner-title">Plangenix</b></a>
+        </div>
+         <!--main body section-->
+        <div id="main" class="main">
+            <!--Util icons stay on top right corner-->
+            <util>
+                <a href="./reference/profilePage.html"><img class="util img-btn" src="./images/Profile.png" alt="Profile"></a>
+                <a href="./reference/settingsPage.html"><img class="util img-btn" src="./images/Setting.png" alt="Settings"></a>
+                <a href="./reference/planPage.html"><img class="util img-btn" src="./images/Add.png" alt="Plan Event"></a>
+            </util>
+            
+            <!--Welcome Text on top-->
+            <h1>Welcome, <user>#USER</user> </h1>
+            
+            <!--Planned Events View Section-->
+            <div class="planned-event">
+                <h2>Your Planned Events</h2>
+
+                <form class="search-form">
+                    <input type="text" class="search-bar" placeholder="Search">
+                    <img src="./images/Search.png">
+                </form>  
+                <a href="./reference/planPage.html" class="plan-event-btn">Plan Event</a>
+            </div>
+            
+            <div class="display-event">
+                <h3>You have #X events planned</h3>
+
+                <!--Display saved events-->
+                <main>
+                    <!--Script that adds saved events / refer to Lab 6/7-->
+                    <!---->
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
