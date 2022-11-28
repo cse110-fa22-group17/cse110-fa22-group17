@@ -152,7 +152,7 @@ if(okButton != null){
   document.getElementById('ok').addEventListener('click',e => {
     e.preventDefault();
     //document.querySelector('.popWin').style.display = 'none';
-    window.location.href = "/source/reference/homePage.html";
+    window.location.href = "./reference/homePage.html";
 
   })
 }
@@ -168,7 +168,7 @@ function goToSpecificPage(){
       window.sessionStorage.setItem('currentEvent', JSON.stringify(index));
       let eventImg = eRoot.querySelector("img");
       window.sessionStorage.setItem('currentEventImg', JSON.stringify(eventImg.src));
-      window.location.href = "/source/reference/specificEventsPage.html";
+      window.location.href = "./reference/specificEventsPage.html";
     })
   }
 }
@@ -196,7 +196,7 @@ function addToSpecificPage(events){
   descrption.innerText = currentEvent.eDesc;
 
   document.querySelector('#edit_event').addEventListener('click', ()=>{
-    window.location.href = "/source/reference/editEventPage.html";
+    window.location.href = "./reference/editEventPage.html";
   })
 }
 
