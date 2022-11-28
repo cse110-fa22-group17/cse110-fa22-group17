@@ -230,3 +230,169 @@ function addToEditPage(events){
     console.log("delete event")    
   })
 }
+
+/**
+ * Gives a dynamic searching functionality to the search bar. When
+ * an input is detected, gets rid of all the results without the input.
+ */
+ function dynamicSearch(e) {
+  let input = document.querySelector('input').value;
+  input = input.toLowerCase();
+  let card = document.getElementsByTagName('event-card');
+
+
+  for (let i = 0; i < card.length; i++) {
+    let eventShadow = card[i].shadowRoot;
+    let x = eventShadow.querySelector('style');
+    let y = eventShadow.querySelector('.title');
+    if (!(y.textContent.toLowerCase().includes(input))) {
+      x.innerHTML = 
+      `
+      * {
+          font-family: sans-serif;
+          margin: 0;
+          padding: 0;
+      }
+
+      article {
+          align-items: center;
+          border: 1px solid #000;
+          border-radius: 8px;
+          display: none;
+          grid-template-rows: 80px 50px 15px 18px 15px 36px;
+          height: 400px;
+          padding: 5px 20px 20px 20px;
+          float: left;
+          column-gap: 10%;
+          row-gap: 10%;
+          margin-right: 40px;
+          margin-bottom: 20px;
+      }
+
+      article p{
+        color: #000;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: -3.5cm;
+      }
+
+      article p+p {
+          color: #000;
+          font-size: 20px;
+          padding-bottom: 40px;
+          text-align: center;
+          margin-bottom: -3.5cm;
+        }
+
+        
+      article h1 {
+          color: #000;
+          text-align: center;
+          margin-bottom: -7cm;
+        }
+
+        article img {
+          border: 5px solid black;
+          border-radius: 8px;
+          margin-top:auto;
+          margin-bttom: auto;
+          margin-left: auto;
+          margin-right: auto;
+          width: 400px;
+          height: 250px;
+         
+        }
+
+        article button {
+          align_items:bottom;
+          border: 1px solid #414BB2;
+          background-color: #414BB2;
+          border-radius: 14px;
+          color: white;
+          cursor: pointer;
+          font-size: 20px;
+          padding: 5px 20px;
+          top:50%;
+          margin-bottom: -3.5cm;
+        }`;
+    }
+    else {
+      x.innerHTML = `
+      * {
+          font-family: sans-serif;
+          margin: 0;
+          padding: 0;
+      }
+
+      article {
+          align-items: center;
+          border: 1px solid #000;
+          border-radius: 8px;
+          display: grid;
+          grid-template-rows: 80px 50px 15px 18px 15px 36px;
+          height: 400px;
+          padding: 5px 20px 20px 20px;
+          float: left;
+          column-gap: 10%;
+          row-gap: 10%;
+          margin-right: 40px;
+          margin-bottom: 20px;
+      }
+
+      article p{
+        color: #000;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: -3.5cm;
+      }
+
+      article p+p {
+          color: #000;
+          font-size: 20px;
+          padding-bottom: 40px;
+          text-align: center;
+          margin-bottom: -3.5cm;
+        }
+
+        
+      article h1 {
+          color: #000;
+          text-align: center;
+          margin-bottom: -7cm;
+        }
+
+        article img {
+          border: 5px solid black;
+          border-radius: 8px;
+          margin-top:auto;
+          margin-bttom: auto;
+          margin-left: auto;
+          margin-right: auto;
+          width: 400px;
+          height: 250px;
+         
+        }
+
+        article button {
+          align_items:bottom;
+          border: 1px solid #414BB2;
+          background-color: #414BB2;
+          border-radius: 14px;
+          color: white;
+          cursor: pointer;
+          font-size: 20px;
+          padding: 5px 20px;
+          top:50%;
+          margin-bottom: -3.5cm;
+        }
+      
+      `;
+    }
+  }
+}
+
+if (document.getElementsByClassName('search-bar')[0]) {
+  document.getElementsByClassName('search-bar')[0].addEventListener('input', dynamicSearch);
+}
