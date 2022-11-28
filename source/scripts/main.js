@@ -168,7 +168,7 @@ function goToSpecificPage(){
       window.sessionStorage.setItem('currentEvent', JSON.stringify(index));
       let eventImg = eRoot.querySelector("img");
       window.sessionStorage.setItem('currentEventImg', JSON.stringify(eventImg.src));
-      window.location.href = "reference/specificEventsPage.html";
+      window.location.href = "./reference/specificEventsPage.html";
     })
   }
 }
