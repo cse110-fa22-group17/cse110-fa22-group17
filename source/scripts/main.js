@@ -7,6 +7,16 @@ function init() {
   if (document.querySelector('#event-form')) {
     initFormHandler();
   }
+  let pageIdentifier = document.querySelector('title') //use to identify different pages?? 
+  if(pageIdentifier.id == "home"){
+    goToSpecificPage(); //viewPage
+  }
+  if(pageIdentifier.id == "specifc event"){
+    addToSpecificPage(events);
+  }
+  if(pageIdentifier.id == "edit event"){
+    addToEditPage(events);
+  }
 }
 
 
@@ -42,7 +52,7 @@ function saveEventsToStorage(events) {
 function addEventsToDoc(events) {
   let main = document.querySelector('main');
 
-  if (events == null) {
+  if (events == null || main == null) {
     return;
   }
 
@@ -105,12 +115,12 @@ function initFormHandler() {
     let eventCard = document.createElement('event-card');
     eventCard.data = eventObj;
     main.append(eventCard);
-    
+
     let localEvents = getEventFromStorage();
     localEvents.push(eventObj);
     saveEventsToStorage(localEvents);
     
-    consol.log('update log');
+    console.log('update log');
     //document.querySelector('.popWin').style.display = 'flex';
     
     //popup();
@@ -118,7 +128,7 @@ function initFormHandler() {
 
   cancelbtn.addEventListener('click', f => {
     f.preventDefault();
-    window.location.href ="/assets/reference/homePage.html";
+    window.location.href ="../homePage.html";
   });
 }
 
@@ -137,10 +147,86 @@ function initFormHandler() {
 //   document.querySelector('.popWin').style.display = 'flex';
 // })
 
+let okButton = document.getElementById('ok');
+if(okButton != null){
+  document.getElementById('ok').addEventListener('click',e => {
+    e.preventDefault();
+    //document.querySelector('.popWin').style.display = 'none';
+    window.location.href = "../homePage.html";
 
-document.getElementById('ok').addEventListener('click',e => {
-   e.preventDefault();
-  //document.querySelector('.popWin').style.display = 'none';
-  window.location.href = "/assets/reference/homePage.html";
+  })
+}
 
-})
+// goto a specific event page
+function goToSpecificPage(){
+  let main = document.querySelector('main');
+  let eventList = main.querySelectorAll('event-card');
+  for(let index = 0; index < eventList.length; index ++){
+    let eRoot =  eventList[index].shadowRoot;
+    let viewEventButton = eRoot.querySelector('button');
+    viewEventButton.addEventListener("click", ()=>{
+      window.sessionStorage.setItem('currentEvent', JSON.stringify(index));
+      let eventImg = eRoot.querySelector("img");
+      window.sessionStorage.setItem('currentEventImg', JSON.stringify(eventImg.src));
+      window.location.href = "./reference/specificEventsPage.html";
+    })
+  }
+}
+
+function addToSpecificPage(events){
+  let eventIndex = JSON.parse(window.sessionStorage.getItem('currentEvent'));
+  let currentEvent = events[eventIndex];
+
+  let title = document.querySelector('#title');
+  title.innerText = "Event Title: " + currentEvent.eTitle;
+
+  let start_date = document.querySelector('#start_date');
+  start_date.innerText = "Start Time: " + currentEvent.startTime;
+
+  let end_date = document.querySelector('#end_date');
+  end_date.innerText = "End Time: " + currentEvent.endTime;
+
+  let organization = document.querySelector('#organization');
+  organization.innerText = "Organization: " + currentEvent.eOrg;
+
+  let location = document.querySelector('#location');
+  location.innerText = "Location: " + currentEvent.eMedium;
+
+  let descrption = document.querySelector('#description');
+  descrption.innerText = currentEvent.eDesc;
+
+  document.querySelector('#edit_event').addEventListener('click', ()=>{
+    window.location.href = "../reference/editEventPage.html";
+  })
+}
+
+function addToEditPage(events){
+  let eventIndex = JSON.parse(window.sessionStorage.getItem('currentEvent'));
+  let currentEvent = events[eventIndex];
+
+  let title = document.querySelector('#title');
+  title.innerText = "Event Title: " + currentEvent.eTitle;
+
+  let start_date = document.querySelector('#start_date');
+  start_date.innerText = "Start Time: " + currentEvent.startTime;
+
+  let end_date = document.querySelector('#end_date');
+  end_date.innerText = "End Time: " + currentEvent.endTime;
+
+  let organization = document.querySelector('#organization');
+  organization.innerText = "Organization: " + currentEvent.eOrg;
+
+  let location = document.querySelector('#location');
+  location.innerText = "Location: " + currentEvent.eMedium;
+
+  let descrption = document.querySelector('#description');
+  descrption.innerText = "Description: " + currentEvent.eDesc;
+
+  document.querySelector('#edit').addEventListener('click', ()=>{
+    console.log("edit event")
+  })
+
+  document.querySelector('#delete').addEventListener('click', ()=>{
+    console.log("delete event")    
+  })
+}

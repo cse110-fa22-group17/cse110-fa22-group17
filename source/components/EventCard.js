@@ -26,9 +26,8 @@ class EventCard extends HTMLElement {
             border-radius: 8px;
             display: grid;
             grid-template-rows: 80px 50px 15px 18px 15px 36px;
-            height: 300px;
-            padding: 0px 20px 20px 20px;
-            width: 15%;
+            height: 400px;
+            padding: 5px 20px 20px 20px;
             float: left;
             column-gap: 10%;
             row-gap: 10%;
@@ -36,22 +35,39 @@ class EventCard extends HTMLElement {
             margin-bottom: 20px;
         }
 
-        article p {
+        article p{
+          color: #000;
+          font-size: 20px;
+          text-align: center;
+          margin-top: 50px;
+          margin-bottom: -3.5cm;
+        }
+
+        article p+p {
             color: #000;
             font-size: 20px;
+            padding-bottom: 40px;
             text-align: center;
+            margin-bottom: -3.5cm;
           }
 
-          article h1 {
+          
+        article h1 {
             color: #000;
             text-align: center;
+            margin-bottom: -7cm;
           }
 
           article img {
-            display: block;
+            border: 5px solid black;
+            border-radius: 8px;
+            margin-top:auto;
+            margin-bttom: auto;
             margin-left: auto;
             margin-right: auto;
-
+            width: 400px;
+            height: 250px;
+           
           }
 
           article button {
@@ -64,6 +80,7 @@ class EventCard extends HTMLElement {
             font-size: 20px;
             padding: 5px 20px;
             top:50%;
+            margin-bottom: -3.5cm;
           }
         
         `;
