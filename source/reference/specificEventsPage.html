@@ -7,39 +7,6 @@
         <script src="../components/EventCard.js" type="module"></script>
         <script src="../scripts/dataHelper.js" type="module"></script>
         <script src="../scripts/main.js" type="module"></script>
-        <style>
-            #edit_event {
-                background-color: #414BB2;
-                border: none;
-                padding: 100px 200px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 40px;
-                margin: 4px 2px;
-                cursor: pointer;
-            }
-
-            #event_img_item {
-                border-radius: 50%;
-                background-color: #6e77d8;
-            }
-
-            #event_details_item{
-                background-color: #714eb3;
-            }
-
-            #event_description_item{
-                background-color: #714eb3;
-            }
-
-            .event_grid_item{
-                margin-left: 10%;
-                margin-top: 10%;
-                height:80%;
-                width:80%;
-            }
-        </style>
     </head>
     <body>
         <div class="web-banner">
@@ -51,19 +18,17 @@
             <util>
                 <a href="./planPage.html"><img class="util_img-btn" src="../images/Add.png" alt="Plan Event"></a>
             </util>
-            <h1>Specific event</h1>
+            <h1 id = title></h1>
         </div>
-        <div id = specific_event_grid>
+        <div id = specific_event_grid> 
 
             <div id = event_img_item class = event_grid_item >
                 <img id = img src="" alt="" style="max-width: 100%; height: auto">
             </div>
 
-            <div id = event_button_item class = event_grid_item >
-                <button id = edit_event> Edit Event</button>
-            </div>
-
-            <div id = event_details_item class = event_grid_item >
+            <h2 id="event_details" style="margin-left:15px; margin-right:15px;">Event Details</h2>
+            <div id = event_details_item class = event_grid_item style="margin-top: -1cm; margin-bottom: -2cm;">
+                
                 <p id = title>  </p>
                 <p id = start_date > </p>
                 <p id = end_date>  </p>
@@ -71,12 +36,13 @@
                 <p id = location> </p>
             </div>
 
-            <div id = event_description_item class = event_grid_item >
-                <h3> Event Description : </h3>
+            <h2 id="event_details" style="margin-left:15px; margin-right:15px;">Event Description</h2>
+            <div id = event_description_item class = event_grid_item style="margin-top: -1cm;">
                 <p id = description> </p>
             </div>
-            
-        </div>
+        </div> 
+        <button id = edit_event class="add-event-btns"> Edit Event</button>
+        <button type="click" id="cancelbtn" class="add-event-btns" style="background-color:red">Back</button>
 
     </body>
 </html>

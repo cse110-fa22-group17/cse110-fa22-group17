@@ -133,11 +133,11 @@ function initFormHandler() {
     //popup();
   });
 
-  cancelbtn.addEventListener('click', f => {
-    f.preventDefault();
-    window.location.href ="../homePage.html";
-  });
 }
+cancelbtn.addEventListener('click', f => {
+  f.preventDefault();
+  window.location.href ="../homePage.html";
+});
 
 //document.getElementById()
 // document.getElementById('added').addEventListener('click',function() {
@@ -190,7 +190,7 @@ function addToSpecificPage(events){
   img.als = currentEvent.eTitle;
 
   let title = document.querySelector('#title');
-  title.innerText = "Event Title: " + currentEvent.eTitle;
+  title.innerText = currentEvent.eTitle;
 
   let start_date = document.querySelector('#start_date');
   start_date.innerText = "Start Time: " + currentEvent.startTime;
