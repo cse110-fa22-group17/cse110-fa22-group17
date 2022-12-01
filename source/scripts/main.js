@@ -216,7 +216,13 @@ function addToEditPage(events){
   let eventIndex = JSON.parse(window.sessionStorage.getItem('currentEvent'));
   let currentEvent = events[eventIndex];
 
+  let img = document.querySelector('#img');
+  img.src = currentEvent.eImg;
+  if (currentEvent.eImg == undefined) { img.src="../images/no-image.png";}
+  img.als = currentEvent.eTitle;
+  
   let title = document.querySelector('#title');
+  title.innerText = currentEvent.eTitle;
   //title.innerText = "Event Title: " + currentEvent.eTitle;
   document.getElementById('eTitle').value= currentEvent.eTitle;
 

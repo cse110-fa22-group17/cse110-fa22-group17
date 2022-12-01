@@ -7,28 +7,6 @@
         <script src="../components/EventCard.js" type="module"></script>
         <script src="../scripts/dataHelper.js" type="module"></script>
         <script src="../scripts/main.js" type="module"></script>
-        <style>
-            
-            #edit_event_grid {
-                display: grid; 
-                grid-auto-columns: 1fr; 
-                grid-template-rows: 0.9fr 1.7fr; 
-                gap: 0px 0px; 
-            }
-            #event_img_item{
-                background-color: #6e77d8;
-                margin-left: 20%;
-                margin-right: 20%;
-                margin-bottom: 5%;
-                align-items: center;
-            }
-            #event_details_item{
-                background-color: #a874d8;
-                margin-left: 20%;
-                margin-right: 20%;
-                margin-bottom: 5%;
-            }
-        </style>
     </head>
     <body>
         <div class="web-banner">
@@ -41,20 +19,19 @@
             <util>
                 <a href="./planPage.html"><img class="util_img-btn" src="../images/Add.png" alt="Plan Event"></a>
             </util>
-            <h1 style="margin-left:50px">Specific event</h1>
+            <h1 id = title style="margin-left:50px"></h1>
         </div>
         <div id = edit_event_grid>
-
-            <div id = event_img_item class = event_grid_item >  
+            <fieldset class="header">
+            <div id = event_img_item class = event_grid_item >
+                <img id = img src="" alt="" style="max-width: 100%; height: auto">
+            </div>
+            <div style="margin-top:50px;"><b>Select Event Image:</b>
                 <input type="file" id="imgFile" name="imgFile" accept="image/*" src="../images/Clueless.png">
             </div>
 
-            <form id="event-form" class = event_grid_item>
-                <img class="eventimg2 "src="../images/pinksplash.png" alt="Event image">
-                <img class="eventimg1 "src="../images/pinksplash.png" alt="Event image">
-                <legend>
-                    <h2 id="event_details">Event Details</h2>
-                </legend>
+            <h2 id="event_details">Event Details</h2>
+            <form id="event-form" class = event_grid_item> 
                 <label for="e-title">Title:
                     <input type="text" id="eTitle" name="eTitle" required>
                 </label> <br><br>
@@ -79,11 +56,12 @@
                         <input type="datetime-local" id="endTime" name="endTime">
                     </label>
                 </div></b>
+            </form>
             </fieldset>
-            
-            <button type="click" id="cancelbtn" class="add-event-btns" style="background-color:red">Cancel</button>
-            <button type="click" id = "edit" class="add-event-btns" style="background-color:green"> Confirm Changes</button>
-            <button type="click" id = "delete" class="add-event-btns" style="background-color:blue"> Delete</button>
+        </div>
+            <button type="click" id = "edit" class="add-event-btns"> Confirm Changes</button>
+            <button type="click" id="cancelbtn" class="add-event-btns" >Cancel</button>
+            <button type="click" id = "delete" class="add-event-btns" style="background-color:red"> Delete</button>
 
         <!-- popup window -->
          <div class="popWin">
@@ -98,10 +76,10 @@
             
             </div>
          </div>
-        </form>
+     
         
 
-        </div>
+      
 
     </body>
 

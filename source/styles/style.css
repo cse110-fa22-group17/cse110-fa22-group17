@@ -151,7 +151,6 @@ h1 {
     text-align: center;
 }
 .eventimg1 {
-
     float: right;
     width: 100%;
     max-width: 30vw;
@@ -279,7 +278,7 @@ h1 {
     margin-left: 10%;
     height:80%;
     width:80%;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -293,4 +292,18 @@ h1 {
     width: 800px;
     height: 300px;
     margin-bottom: -2cm;
+}
+
+/* Edit Event Page */
+#edit_event_grid {
+    display: grid; 
+    grid-template-rows: auto;
+    grid-template-columns: auto; 
+    gap: 0px 0px; 
+}
+#event_details_item{
+    background-color: #a874d8;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5%;
 }
