@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>dataHelper.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#addEventsToDoc">addEventsToDoc</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#convertForm2JSON">convertForm2JSON</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#convertTime">convertTime</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#dynamicSearch">dynamicSearch</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getEnd">getEnd</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getEventFromStorage">getEventFromStorage</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getImg">getImg</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getLocation">getLocation</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getOrg">getOrg</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getStart">getStart</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getTitle">getTitle</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#initFormHandler">initFormHandler</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#saveEventsToStorage">saveEventsToStorage</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">dataHelper.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Get the image of event.
+ * 
+ * Local storage only is able to store strings.
+ * It is not possible to directly convert a File object into a string using JSON.stringify (it returns {}).
+ * In planPage.html the file submission is not included in the event-form to prevent immediate string conversion.
+ * Need to convert File object to data url first, then it can be stringifyied.
+*/
+export function getImg(data) {
+    if (data &amp;&amp; data.eImg) {
+        return data.eImg;
+    }
+    return "./images/no-image.png";
+}
+
+/**
+ * Get the title of event.
+*/
+export function getTitle(data) {
+    if (data &amp;&amp; data.eTitle) {
+        return data.eTitle;
+    }
+    return "";
+}
+
+/**
+ * Get the organizer of event.
+*/
+export function getOrg(data) {
+    if (data &amp;&amp; data.eOrg) {
+        return data.eOrg;
+    }
+    return "";
+}
+
+/**
+ * Get the start of event
+*/
+export function getStart(data) {
+    if (data &amp;&amp; data.startTime) {
+        let startArr = data.startTime.split("T");
+        let dateArray = startArr[0].split("-");
+        let MMDDYYY = dateArray[1] + "-" + dateArray[2] + "-" + dateArray[0]
+        return "Start: " + MMDDYYY + " Time: " + convertTime(startArr[1]);
+    }
+    return "";
+}
+
+/**
+ * Get the end of event
+*/
+export function getEnd(data) {
+    if (data &amp;&amp; data.endTime) {
+        let endArr = data.endTime.split("T");
+        let dateArray = endArr[0].split("-");
+        let MMDDYYY = dateArray[1] + "-" + dateArray[2] + "-" + dateArray[0]
+        return "End: " + MMDDYYY + " Time: " + convertTime(endArr[1]);
+    }
+    return "";
+}
+
+/**
+ * Get the location of event
+*/
+export function getLocation(data) {
+    if (data &amp;&amp; data.eMedium) {
+        return data.eMedium;
+    }
+    return "";
+}
+
+/**
+ * Helper method to convert 24 Hour time to 12 Hour
+ */
+function convertTime(time) {
+    let timeArr = time.split(":");
+    var hourInt = parseInt(timeArr[0])
+    var AMPM = "";
+    if (hourInt > 12) {
+        AMPM = "PM"
+        hourInt = hourInt - 12;
+    } else {
+        AMPM = "AM"
+    }
+    return hourInt + ":" + timeArr[1] + " " + AMPM;
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Thu Dec 01 2022 20:30:33 GMT+0000 (Coordinated Universal Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

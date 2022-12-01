@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>main.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#addEventsToDoc">addEventsToDoc</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#convertForm2JSON">convertForm2JSON</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#convertTime">convertTime</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#dynamicSearch">dynamicSearch</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getEnd">getEnd</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getEventFromStorage">getEventFromStorage</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getImg">getImg</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getLocation">getLocation</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getOrg">getOrg</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getStart">getStart</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getTitle">getTitle</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#initFormHandler">initFormHandler</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#saveEventsToStorage">saveEventsToStorage</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">main.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>window.addEventListener('DOMContentLoaded', init);
+
+// Starts the program, all function calls trace back here
+function init() {
+  let events = getEventFromStorage();
+  addEventsToDoc(events);
+  if (document.querySelector('#event-form')) {
+    initFormHandler();
+  }
+  let numOfEvents = document.querySelector('#numOfEvents')
+  if(numOfEvents){
+    numOfEvents.innerText = "You have " + events.length + " events planned!"
+  }
+  let pageIdentifier = document.querySelector('title') //use to identify different pages?? 
+  if(pageIdentifier.id == "home"){
+    goToSpecificPage(); 
+  }
+  if(pageIdentifier.id == "specifc event"){
+    addToSpecificPage(events);
+  }
+  if(pageIdentifier.id == "edit event"){
+    addToEditPage(events);
+  }
+}
+
+
+/**
+ * Reads 'events' from localStorage and returns an array of
+ * all of the events found (parsed, not in string form). If
+ * nothing is found in localStorage for 'event', an empty array
+ * is returned.
+ * @returns {Array&lt;Object>} An array of events found in localStorage
+ */
+function getEventFromStorage() {
+  return JSON.parse(window.localStorage.getItem('events')) || [];
+}
+
+
+/**
+ * Takes in an array of events, converts it to a string, and then
+ * saves that string to 'events' in localStorage
+ * @param {Array&lt;Object>} events An array of events
+ */
+function saveEventsToStorage(events) {
+  localStorage.setItem('events', JSON.stringify(events));
+}
+
+// once click the delet button
+
+//document.querySelector('#delete').add
+
+/**
+ * Takes in an array of events and for each event creates a
+ * new &lt;event-card> element, adds the event data to that card
+ * using element.data = {...}, and then appends that new event
+ * to &lt;main>
+ * @param {Array&lt;Object>} events An array of events
+ */
+function addEventsToDoc(events) {
+  let main = document.querySelector('main');
+
+  if (events == null || main == null) {
+    return;
+  }
+
+  for (const event of events) {
+    let eventCard = document.createElement('event-card');
+    eventCard.data = event;
+    main.append(eventCard);
+  }
+}
+
+
+/**
+ * Takes in a FormData object and uses all of its the key,value
+ * pairs to create a JSON object to be stored onto LocalStorage
+ * @param {Array&lt;Object>} formData A FormData object 
+ */
+function convertForm2JSON(formData) {
+  let eventObj = {};
+  for (const [key, value] of formData.entries()) {
+    eventObj[key] = value;
+  }
+  return eventObj;
+}
+
+
+/**
+ * Adds the necessary event handlers to &lt;form> 
+ */
+function initFormHandler() {
+  let main = document.querySelector('main')
+  let eventForm = document.querySelector('#event-form');
+  let cancelbtn = document.querySelector('#cancelbtn');
+
+  const imgFile = document.querySelector('#imgFile');
+  const eImg = document.querySelector('#eImg');
+  let dataURL;
+
+  // Displays image file via dataurl and saves it to be stored locally when form is submitted
+  imgFile.addEventListener('change', (event) => {
+    const file = imgFile.files[0];
+    const reader = new FileReader();
+    console.log(eImg);
+    reader.addEventListener('load', () => {
+        eImg.src = reader.result;
+        dataURL = reader.result;
+        window.sessionStorage.setItem('editEventImg', JSON.stringify(reader.result));  
+        console.log(reader.result)
+    });
+    reader.readAsDataURL(file);
+  });
+
+  // Creates event-card from form data and saves it locally
+  eventForm.addEventListener('submit', e => {
+    
+    e.preventDefault();
+    document.querySelector('.popWin').style.display = 'flex';
+    
+    const formData = new FormData(eventForm);
+    let eventObj = convertForm2JSON(formData);
+
+    eventObj.eImg = dataURL;
+
+    let eventCard = document.createElement('event-card');
+    eventCard.data = eventObj;
+    main.append(eventCard);
+
+    let localEvents = getEventFromStorage();
+    localEvents.push(eventObj);
+    saveEventsToStorage(localEvents);
+    
+    console.log('update log');
+    //document.querySelector('.popWin').style.display = 'flex';
+    
+    //popup();
+  });
+
+  cancelbtn.addEventListener('click', f => {
+    f.preventDefault();
+    window.location.href ="../homePage.html";
+  });
+}
+
+
+//document.getElementById()
+// document.getElementById('added').addEventListener('click',function() {
+
+//   
+   
+// })
+
+//  function popup(){
+//   document.querySelector('.popWin').style.display = 'flex';
+//  }
+
+// document.querySelector('#event-form').addEventListener('submit', function(){
+//   document.querySelector('.popWin').style.display = 'flex';
+// })
+
+let okButton = document.getElementById('ok');
+if(okButton != null){
+  document.getElementById('ok').addEventListener('click',e => {
+    e.preventDefault();
+    //document.querySelector('.popWin').style.display = 'none';
+    window.location.href = "../homePage.html";
+
+  })
+}
+
+// goto a specific event page
+function goToSpecificPage(){
+  let main = document.querySelector('main');
+  let eventList = main.querySelectorAll('event-card');
+  for(let index = 0; index &lt; eventList.length; index ++){
+    let eRoot =  eventList[index].shadowRoot;
+    let viewEventButton = eRoot.querySelector('button');
+    viewEventButton.addEventListener("click", ()=>{
+      window.sessionStorage.setItem('currentEvent', JSON.stringify(index));
+      let eventImg = eRoot.querySelector("img");
+      window.sessionStorage.setItem('currentEventImg', JSON.stringify(eventImg.src));
+      window.location.href = "./reference/specificEventsPage.html";
+    })
+  }
+}
+
+function addToSpecificPage(events){
+  let eventIndex = JSON.parse(window.sessionStorage.getItem('currentEvent'));
+  let currentEvent = events[eventIndex];
+
+  let img = document.querySelector('#img');
+  img.src = currentEvent.eImg;
+  if (currentEvent.eImg == undefined) { img.src="../images/no-image.png";}
+  img.als = currentEvent.eTitle;
+
+  let title = document.querySelector('#title');
+  title.innerText = currentEvent.eTitle;
+
+  let start_date = document.querySelector('#start_date');
+  start_date.innerText = "Start Time: " + currentEvent.startTime;
+
+  let end_date = document.querySelector('#end_date');
+  end_date.innerText = "End Time: " + currentEvent.endTime;
+
+  let organization = document.querySelector('#organization');
+  organization.innerText = "Organization: " + currentEvent.eOrg;
+
+  let location = document.querySelector('#location');
+  location.innerText = "Location: " + currentEvent.eMedium;
+
+  let descrption = document.querySelector('#description');
+  descrption.innerText = currentEvent.eDesc;
+
+  document.querySelector('#edit_event').addEventListener('click', ()=>{
+    window.location.href = "../reference/editEventPage.html";
+  })
+  document.querySelector('#cancelbtn').addEventListener('click', ()=>{
+    window.location.href = "../homePage.html";    
+  })
+}
+
+function addToEditPage(events){
+  let eventIndex = JSON.parse(window.sessionStorage.getItem('currentEvent'));
+  let currentEvent = events[eventIndex];
+
+  let img = document.querySelector('#eImg');
+  img.src = currentEvent.eImg;
+  if (currentEvent.eImg == undefined) { img.src="../images/no-image.png";}
+  img.als = currentEvent.eTitle;
+  
+  let title = document.querySelector('#title');
+  title.innerText = currentEvent.eTitle;
+  //title.innerText = "Event Title: " + currentEvent.eTitle;
+  document.getElementById('eTitle').value= currentEvent.eTitle;
+
+  //let start_date = document.querySelector('#start_date');
+  //start_date.innerText = "Start Time: " + currentEvent.startTime;
+  document.getElementById('startTime').value= currentEvent.startTime;
+
+  //let end_date = document.querySelector('#end_date');
+  //end_date.innerText = "End Time: " + currentEvent.endTime;
+  document.getElementById('endTime').value= currentEvent.endTime;
+
+  //let organization = document.querySelector('#organization');
+  //organization.innerText = "Organization: " + currentEvent.eOrg;
+  document.getElementById('eOrg').value= currentEvent.eOrg;
+
+  //let location = document.querySelector('#location');
+  //location.innerText = "Location: " + currentEvent.eMedium;
+  document.getElementById('eMedium').value= currentEvent.eMedium;
+  
+
+  //let descrption = document.querySelector('#description');
+  //descrption.innerText = "Description: " + currentEvent.eDesc;
+  document.getElementById('eDesc').value= currentEvent.eDesc;
+
+
+  document.querySelector('#edit').addEventListener('click', ()=>{
+    console.log("edit event")
+    
+    console.log(document.getElementById('eTitle').value);
+
+    currentEvent.eTitle = document.getElementById('eTitle').value;
+    currentEvent.startTime = document.getElementById('startTime').value;
+    currentEvent.endTime = document.getElementById('endTime').value;
+    currentEvent.eOrg = document.getElementById('eOrg').value;
+    currentEvent.eMedium = document.getElementById('eMedium').value;
+    currentEvent.eDesc = document.getElementById('eDesc').value;
+    currentEvent.eImg = JSON.parse(window.sessionStorage.getItem('editEventImg'));
+
+    events[eventIndex] = currentEvent;
+    window.localStorage.setItem('events', JSON.stringify(events)); 
+    
+    document.querySelector('.popWin').style.display = 'flex';
+  })
+
+  document.querySelector('#delete').addEventListener('click', f =>{
+    var update = new Array(events.length - 1);
+
+    for(let i = 0 ;i &lt; eventIndex; i++){
+      update[i] = events[i];
+    }
+
+    for(let j = eventIndex ; j &lt; events.length - 1; j ++){
+      update[j] = events[j+1];
+    }
+    console.log(JSON.stringify(update));
+    window.localStorage.setItem('events', JSON.stringify(update));   
+    window.location.href = "../homePage.html";    
+  })
+}
+
+/**
+ * Gives a dynamic searching functionality to the search bar. When
+ * an input is detected, gets rid of all the results without the input.
+ */
+ function dynamicSearch(e) {
+  let input = document.querySelector('input').value;
+  input = input.toLowerCase();
+  let card = document.getElementsByTagName('event-card');
+
+
+  for (let i = 0; i &lt; card.length; i++) {
+    let eventShadow = card[i].shadowRoot;
+    let x = eventShadow.querySelector('style');
+    let y = eventShadow.querySelector('.title');
+    if (!(y.textContent.toLowerCase().includes(input))) {
+      x.innerHTML = 
+      `
+      * {
+          font-family: sans-serif;
+          margin: 0;
+          padding: 0;
+      }
+
+      article {
+          align-items: center;
+          border: 1px solid #000;
+          border-radius: 8px;
+          display: none;
+          grid-template-rows: 80px 50px 15px 18px 15px 36px;
+          height: 400px;
+          padding: 5px 20px 20px 20px;
+          float: left;
+          column-gap: 10%;
+          row-gap: 10%;
+          margin-right: 40px;
+          margin-bottom: 20px;
+      }
+
+      article p{
+        color: #000;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: -3.5cm;
+      }
+
+      article p+p {
+          color: #000;
+          font-size: 20px;
+          padding-bottom: 40px;
+          text-align: center;
+          margin-bottom: -3.5cm;
+        }
+
+        
+      article h1 {
+          color: #000;
+          text-align: center;
+          margin-bottom: -7cm;
+        }
+
+        article img {
+          border: 5px solid black;
+          border-radius: 8px;
+          margin-top:auto;
+          margin-bttom: auto;
+          margin-left: auto;
+          margin-right: auto;
+          width: 400px;
+          height: 250px;
+         
+        }
+
+        article button {
+          align_items:bottom;
+          border: 1px solid #414BB2;
+          background-color: #414BB2;
+          border-radius: 14px;
+          color: white;
+          cursor: pointer;
+          font-size: 20px;
+          padding: 5px 20px;
+          top:50%;
+          margin-bottom: -3.5cm;
+        }`;
+    }
+    else {
+      x.innerHTML = `
+      * {
+          font-family: sans-serif;
+          margin: 0;
+          padding: 0;
+      }
+
+      article {
+          align-items: center;
+          border: 1px solid #000;
+          border-radius: 8px;
+          display: grid;
+          grid-template-rows: 80px 50px 15px 18px 15px 36px;
+          height: 400px;
+          padding: 5px 20px 20px 20px;
+          float: left;
+          column-gap: 10%;
+          row-gap: 10%;
+          margin-right: 40px;
+          margin-bottom: 20px;
+      }
+
+      article p{
+        color: #000;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: -3.5cm;
+      }
+
+      article p+p {
+          color: #000;
+          font-size: 20px;
+          padding-bottom: 40px;
+          text-align: center;
+          margin-bottom: -3.5cm;
+        }
+
+        
+      article h1 {
+          color: #000;
+          text-align: center;
+          margin-bottom: -7cm;
+        }
+
+        article img {
+          border: 5px solid black;
+          border-radius: 8px;
+          margin-top:auto;
+          margin-bttom: auto;
+          margin-left: auto;
+          margin-right: auto;
+          width: 400px;
+          height: 250px;
+         
+        }
+
+        article button {
+          align_items:bottom;
+          border: 1px solid #414BB2;
+          background-color: #414BB2;
+          border-radius: 14px;
+          color: white;
+          cursor: pointer;
+          font-size: 20px;
+          padding: 5px 20px;
+          top:50%;
+          margin-bottom: -3.5cm;
+        }
+      
+      `;
+    }
+  }
+}
+
+if (document.getElementsByClassName('search-bar')[0]) {
+  document.getElementsByClassName('search-bar')[0].addEventListener('input', dynamicSearch);
+}
+
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Thu Dec 01 2022 20:30:33 GMT+0000 (Coordinated Universal Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
