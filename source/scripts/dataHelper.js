@@ -10,7 +10,7 @@ export function getImg(data) {
     if (data && data.eImg) {
         return data.eImg;
     }
-    return "";
+    return "./images/no-image.png";
 }
 
 /**
