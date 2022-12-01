@@ -101,9 +101,12 @@ function initFormHandler() {
   imgFile.addEventListener('change', (event) => {
     const file = imgFile.files[0];
     const reader = new FileReader();
+    console.log(eImg);
     reader.addEventListener('load', () => {
         eImg.src = reader.result;
         dataURL = reader.result;
+        window.sessionStorage.setItem('editEventImg', JSON.stringify(reader.result));  
+        console.log(reader.result)
     });
     reader.readAsDataURL(file);
   });
@@ -133,11 +136,12 @@ function initFormHandler() {
     //popup();
   });
 
+  cancelbtn.addEventListener('click', f => {
+    f.preventDefault();
+    window.location.href ="../homePage.html";
+  });
 }
-cancelbtn.addEventListener('click', f => {
-  f.preventDefault();
-  window.location.href ="../homePage.html";
-});
+
 
 //document.getElementById()
 // document.getElementById('added').addEventListener('click',function() {
@@ -210,13 +214,16 @@ function addToSpecificPage(events){
   document.querySelector('#edit_event').addEventListener('click', ()=>{
     window.location.href = "../reference/editEventPage.html";
   })
+  document.querySelector('#cancelbtn').addEventListener('click', ()=>{
+    window.location.href = "../homePage.html";    
+  })
 }
 
 function addToEditPage(events){
   let eventIndex = JSON.parse(window.sessionStorage.getItem('currentEvent'));
   let currentEvent = events[eventIndex];
 
-  let img = document.querySelector('#img');
+  let img = document.querySelector('#eImg');
   img.src = currentEvent.eImg;
   if (currentEvent.eImg == undefined) { img.src="../images/no-image.png";}
   img.als = currentEvent.eTitle;
@@ -226,24 +233,24 @@ function addToEditPage(events){
   //title.innerText = "Event Title: " + currentEvent.eTitle;
   document.getElementById('eTitle').value= currentEvent.eTitle;
 
-  let start_date = document.querySelector('#start_date');
+  //let start_date = document.querySelector('#start_date');
   //start_date.innerText = "Start Time: " + currentEvent.startTime;
   document.getElementById('startTime').value= currentEvent.startTime;
 
-  let end_date = document.querySelector('#end_date');
+  //let end_date = document.querySelector('#end_date');
   //end_date.innerText = "End Time: " + currentEvent.endTime;
   document.getElementById('endTime').value= currentEvent.endTime;
 
-  let organization = document.querySelector('#organization');
+  //let organization = document.querySelector('#organization');
   //organization.innerText = "Organization: " + currentEvent.eOrg;
   document.getElementById('eOrg').value= currentEvent.eOrg;
 
-  let location = document.querySelector('#location');
+  //let location = document.querySelector('#location');
   //location.innerText = "Location: " + currentEvent.eMedium;
   document.getElementById('eMedium').value= currentEvent.eMedium;
   
 
-  let descrption = document.querySelector('#description');
+  //let descrption = document.querySelector('#description');
   //descrption.innerText = "Description: " + currentEvent.eDesc;
   document.getElementById('eDesc').value= currentEvent.eDesc;
 
@@ -259,8 +266,8 @@ function addToEditPage(events){
     currentEvent.eOrg = document.getElementById('eOrg').value;
     currentEvent.eMedium = document.getElementById('eMedium').value;
     currentEvent.eDesc = document.getElementById('eDesc').value;
+    currentEvent.eImg = JSON.parse(window.sessionStorage.getItem('editEventImg'));
 
-    console.log(currentEvent)
     events[eventIndex] = currentEvent;
     window.localStorage.setItem('events', JSON.stringify(events)); 
     
