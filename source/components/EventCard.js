@@ -22,12 +22,12 @@ class EventCard extends HTMLElement {
 
         article {
             align-items: center;
-            border: 1px solid #000;
+            border: 0px solid #414BB2;
             border-radius: 8px;
             display: grid;
             grid-template-rows: 80px 50px 15px 18px 15px 36px;
             height: 400px;
-            padding: 5px 20px 20px 20px;
+            padding: 5px 20px 90px 20px;
             float: left;
             column-gap: 10%;
             row-gap: 10%;
@@ -39,7 +39,7 @@ class EventCard extends HTMLElement {
           color: #000;
           font-size: 20px;
           text-align: center;
-          margin-top: 50px;
+          margin-top: 70px;
           margin-bottom: -3.5cm;
         }
 
@@ -48,7 +48,7 @@ class EventCard extends HTMLElement {
             font-size: 20px;
             padding-bottom: 40px;
             text-align: center;
-            margin-bottom: -3.5cm;
+            margin-bottom: -3cm;
           }
 
           
@@ -59,7 +59,7 @@ class EventCard extends HTMLElement {
           }
 
           article img {
-            border: 5px solid black;
+            border: 5px solid #414BB2;
             border-radius: 8px;
             margin-top:auto;
             margin-bttom: auto;
