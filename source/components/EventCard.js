@@ -82,6 +82,10 @@ class EventCard extends HTMLElement {
             top:50%;
             margin-bottom: -3.5cm;
           }
+
+          article button:hover {
+            background-color: #21287e;
+          }
         
         `;
 
