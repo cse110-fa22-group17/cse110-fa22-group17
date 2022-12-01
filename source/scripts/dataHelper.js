@@ -38,7 +38,10 @@ export function getOrg(data) {
 */
 export function getStart(data) {
     if (data && data.startTime) {
-        return data.startTime;
+        let startArr = data.startTime.split("T");
+        let dateArray = startArr[0].split("-");
+        let MMDDYYY = dateArray[1] + "-" + dateArray[2] + "-" + dateArray[0]
+        return "Start: " + MMDDYYY + " Time: " + convertTime(startArr[1]);
     }
     return "";
 }
@@ -48,7 +51,10 @@ export function getStart(data) {
 */
 export function getEnd(data) {
     if (data && data.endTime) {
-        return data.endTime;
+        let endArr = data.endTime.split("T");
+        let dateArray = endArr[0].split("-");
+        let MMDDYYY = dateArray[1] + "-" + dateArray[2] + "-" + dateArray[0]
+        return "End: " + MMDDYYY + " Time: " + convertTime(endArr[1]);
     }
     return "";
 }
@@ -61,4 +67,20 @@ export function getLocation(data) {
         return data.eMedium;
     }
     return "";
+}
+
+/**
+ * Helper method to convert 24 Hour time to 12 Hour
+ */
+function convertTime(time) {
+    let timeArr = time.split(":");
+    var hourInt = parseInt(timeArr[0])
+    var AMPM = "";
+    if (hourInt > 12) {
+        AMPM = "PM"
+        hourInt = hourInt - 12;
+    } else {
+        AMPM = "AM"
+    }
+    return hourInt + ":" + timeArr[1] + " " + AMPM;
 }

@@ -110,10 +110,16 @@ class EventCard extends HTMLElement {
         eventTitle.textContent = getTitle(data);
         card.appendChild(eventTitle);
         
-        const eventDates = document.createElement("p");
-        eventDates.classList.add("dates");
-        eventDates.textContent = getStart(data) + ' ' + getEnd(data);
-        card.appendChild(eventDates);
+        const startDate = document.createElement("p");
+        startDate.classList.add("dates");
+        startDate.textContent = getStart(data);
+        card.appendChild(startDate);
+
+
+        const endDate = document.createElement("p");
+        endDate.classList.add("endDate");
+        endDate.textContent = getEnd(data);
+        card.appendChild(endDate);
         
         const eventLocation = document.createElement("p");
         eventLocation.classList.add("location");
