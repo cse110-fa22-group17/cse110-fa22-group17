@@ -7,9 +7,13 @@ function init() {
   if (document.querySelector('#event-form')) {
     initFormHandler();
   }
+  let numOfEvents = document.querySelector('#numOfEvents')
+  if(numOfEvents){
+    numOfEvents.innerText = "You have " + events.length + " events planned!"
+  }
   let pageIdentifier = document.querySelector('title') //use to identify different pages?? 
   if(pageIdentifier.id == "home"){
-    goToSpecificPage(); //viewPage
+    goToSpecificPage(); 
   }
   if(pageIdentifier.id == "specifc event"){
     addToSpecificPage(events);
