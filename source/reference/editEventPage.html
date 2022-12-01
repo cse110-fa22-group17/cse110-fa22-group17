@@ -23,18 +23,16 @@
                 align-items: center;
             }
             #edit{
-                background-color: #3e84bd;
+                background-color: #00a8fd;
                 text-align: center;
                 font-size: 40px;
                 border: none;
-                margin-right: 5%;
-            }   
+            }
             #delete{
                 background-color: #af3c3c;
                 text-align: center;
                 font-size: 40px;
                 border: none;
-                margin-left: 5%;
             }
             #event_details_item{
                 background-color: #a874d8;
@@ -62,22 +60,67 @@
         <div id = edit_event_grid>
 
             <div id = event_img_item class = event_grid_item >  
-                <img id = img src="../images/Clueless.png" alt="">
+                <input type="file" id="imgFile" name="imgFile" accept="image/*" src="../images/Clueless.png">
             </div>
 
             <div class = event_grid_item>
-                <button id = edit> Edit Event </button>
+                <button id = edit> Confirm Changes</button>
                 <button id = delete> Delete Event </button>
             </div>
 
-            <div id = event_details_item class = event_grid_item>
-                <p id = title>  </p>
-                <p id = start_date > </p>
-                <p id = end_date>  </p>
-                <p id = organization> </p>
-                <p id = location> </p>
-                <p id = description> </p>
+            <form id="event-form" class = event_grid_item>
+                <img class="eventimg2 "src="../images/pinksplash.png" alt="Event image">
+                <img class="eventimg1 "src="../images/pinksplash.png" alt="Event image">
+                <legend>
+                    <h2 id="event_details">Event Details</h2>
+                </legend>
+                <label for="e-title">Title:
+                    <input type="text" id="eTitle" name="eTitle" required>
+                </label> <br><br>
+                <label for="e-org">Organizer:
+                    <input type="text" id="eOrg" name="eOrg" required>
+                </label> <br><br>
+                <label for="e-desc">Description:
+                    <input type="text" id="eDesc" name="eDesc" required>
+                </label> <br><br>
+
+                <label for="e-medium"> Location:
+                    <input type="text" id="eMedium" name="eMedium" required>
+                </label> <br><br>
+
+                <div>
+                    <label for="meeting-time">Start Time:
+                        <input type="datetime-local" id="startTime" name="startTime">
+                    </label>
+                </div> <br>
+                <div>
+                    <label for="meeting-time">End Time:
+                        <input type="datetime-local" id="endTime" name="endTime">
+                    </label>
+                </div></b>
+            
+            
+            
+            
+            </fieldset>
+            
+            <button type="click" id="cancelbtn" class="add-event-btns" style="background-color:red">Cancel</button>
+       
+        <!-- popup window -->
+         <div class="popWin">
+            <div class="window-content">
+                <img src = "../images/Clueless.png" style="position:absolute; left:180px; top: 100px;" >
+                
+                <p id="notice" >Event Successfully Modified</p>
+            
+            <div class="popButton">
+                <button type="click" id="ok" style="position:absolute; left:215px; top:250px" > OK </button>
             </div>
+            
+            </div>
+         </div>
+        </form>
+        
 
         </div>
 

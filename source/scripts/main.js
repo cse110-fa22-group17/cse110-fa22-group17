@@ -41,6 +41,9 @@ function saveEventsToStorage(events) {
   localStorage.setItem('events', JSON.stringify(events));
 }
 
+// once click the delet button
+
+//document.querySelector('#delete').add
 
 /**
  * Takes in an array of events and for each event creates a
@@ -205,29 +208,63 @@ function addToEditPage(events){
   let currentEvent = events[eventIndex];
 
   let title = document.querySelector('#title');
-  title.innerText = "Event Title: " + currentEvent.eTitle;
+  //title.innerText = "Event Title: " + currentEvent.eTitle;
+  document.getElementById('eTitle').value= currentEvent.eTitle;
 
   let start_date = document.querySelector('#start_date');
-  start_date.innerText = "Start Time: " + currentEvent.startTime;
+  //start_date.innerText = "Start Time: " + currentEvent.startTime;
+  document.getElementById('startTime').value= currentEvent.startTime;
 
   let end_date = document.querySelector('#end_date');
-  end_date.innerText = "End Time: " + currentEvent.endTime;
+  //end_date.innerText = "End Time: " + currentEvent.endTime;
+  document.getElementById('endTime').value= currentEvent.endTime;
 
   let organization = document.querySelector('#organization');
-  organization.innerText = "Organization: " + currentEvent.eOrg;
+  //organization.innerText = "Organization: " + currentEvent.eOrg;
+  document.getElementById('eOrg').value= currentEvent.eOrg;
 
   let location = document.querySelector('#location');
-  location.innerText = "Location: " + currentEvent.eMedium;
+  //location.innerText = "Location: " + currentEvent.eMedium;
+  document.getElementById('eMedium').value= currentEvent.eMedium;
+  
 
   let descrption = document.querySelector('#description');
-  descrption.innerText = "Description: " + currentEvent.eDesc;
+  //descrption.innerText = "Description: " + currentEvent.eDesc;
+  document.getElementById('eDesc').value= currentEvent.eDesc;
+
 
   document.querySelector('#edit').addEventListener('click', ()=>{
     console.log("edit event")
+    
+    console.log(document.getElementById('eTitle').value);
+
+    currentEvent.eTitle = document.getElementById('eTitle').value;
+    currentEvent.startTime = document.getElementById('startTime').value;
+    currentEvent.endTime = document.getElementById('endTime').value;
+    currentEvent.eOrg = document.getElementById('eOrg').value;
+    currentEvent.eMedium = document.getElementById('eMedium').value;
+    currentEvent.eDesc = document.getElementById('eDesc').value;
+
+    console.log(currentEvent)
+    events[eventIndex] = currentEvent;
+    window.localStorage.setItem('events', JSON.stringify(events)); 
+    
+    document.querySelector('.popWin').style.display = 'flex';
   })
 
-  document.querySelector('#delete').addEventListener('click', ()=>{
-    console.log("delete event")    
+  document.querySelector('#delete').addEventListener('click', f =>{
+    var update = new Array(events.length - 1);
+
+    for(let i = 0 ;i < eventIndex; i++){
+      update[i] = events[i];
+    }
+
+    for(let j = eventIndex ; j < events.length - 1; j ++){
+      update[j] = events[j+1];
+    }
+    console.log(JSON.stringify(update));
+    window.localStorage.setItem('events', JSON.stringify(update));   
+    window.location.href = "../homePage.html";    
   })
 }
 
@@ -396,3 +433,4 @@ function addToEditPage(events){
 if (document.getElementsByClassName('search-bar')[0]) {
   document.getElementsByClassName('search-bar')[0].addEventListener('input', dynamicSearch);
 }
+
