@@ -12,7 +12,7 @@
             #edit_event_grid {
                 display: grid; 
                 grid-auto-columns: 1fr; 
-                grid-template-rows: 0.9fr 0.4fr 1.7fr; 
+                grid-template-rows: 0.9fr 1.7fr; 
                 gap: 0px 0px; 
             }
             #event_img_item{
@@ -21,18 +21,6 @@
                 margin-right: 20%;
                 margin-bottom: 5%;
                 align-items: center;
-            }
-            #edit{
-                background-color: #00a8fd;
-                text-align: center;
-                font-size: 40px;
-                border: none;
-            }
-            #delete{
-                background-color: #af3c3c;
-                text-align: center;
-                font-size: 40px;
-                border: none;
             }
             #event_details_item{
                 background-color: #a874d8;
@@ -61,11 +49,6 @@
 
             <div id = event_img_item class = event_grid_item >  
                 <input type="file" id="imgFile" name="imgFile" accept="image/*" src="../images/Clueless.png">
-            </div>
-
-            <div class = event_grid_item>
-                <button id = edit> Confirm Changes</button>
-                <button id = delete> Delete Event </button>
             </div>
 
             <form id="event-form" class = event_grid_item>
@@ -98,14 +81,12 @@
                         <input type="datetime-local" id="endTime" name="endTime">
                     </label>
                 </div></b>
-            
-            
-            
-            
             </fieldset>
             
             <button type="click" id="cancelbtn" class="add-event-btns" style="background-color:red">Cancel</button>
-       
+            <button type="click" id = "edit" class="add-event-btns" style="background-color:green"> Confirm Changes</button>
+            <button type="click" id = "delete" class="add-event-btns" style="background-color:blue"> Delete</button>
+
         <!-- popup window -->
          <div class="popWin">
             <div class="window-content">
