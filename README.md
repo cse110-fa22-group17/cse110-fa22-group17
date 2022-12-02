@@ -4,4 +4,6 @@
 
 [Team Page](https://github.com/cse110-fa22-group17/cse110-fa22-group17/blob/main/admin/team.md)
 
-[Plangenix](https://cse110-fa22-group17.github.io/cse110-fa22-group17/homePage.html)
+[Plangenix](https://cse110-fa22-group17.github.io/cse110-fa22-group17/source/homePage.html)
+
+[Documentation](https://cse110-fa22-group17.github.io/cse110-fa22-group17/docs/)
