@@ -75,6 +75,7 @@ function addEventsToDoc(events) {
  * Takes in a FormData object and uses all of its the key,value
  * pairs to create a JSON object to be stored onto LocalStorage
  * @param {Array<Object>} formData A FormData object 
+ * @return {Object} JSON object with event key,value pairs 
  */
 function convertForm2JSON(formData) {
   let eventObj = {};
@@ -86,7 +87,9 @@ function convertForm2JSON(formData) {
 
 
 /**
- * Adds the necessary event handlers to <form> 
+ * Adds the necessary event handlers to event-form including:
+ * img file display, event-form submission, 
+ * event-card creation and storage, cancel button 
  */
 function initFormHandler() {
   let main = document.querySelector('main')
