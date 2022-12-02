@@ -1,12 +1,11 @@
 /**
- * Get the image of event.
- * 
- * Local storage only is able to store strings.
- * It is not possible to directly convert a File object into a string using JSON.stringify (it returns {}).
- * In planPage.html the file submission is not included in the event-form to prevent immediate string conversion.
- * Need to convert File object to data url first, then it can be stringifyied.
-*/
-export function getImg(data) {
+ * Takes a JSON object containing event-card data and returns
+ * the stored data URL representing the image if it exists, 
+ * else it returns a default image. 
+ * @param {Object} data A JSON object containing event-card data
+ * @returns {data url | image file} Data url or default image file
+ */
+ export function getImg(data) {
     if (data && data.eImg) {
         return data.eImg;
     }
@@ -14,8 +13,11 @@ export function getImg(data) {
 }
 
 /**
- * Get the title of event.
-*/
+ * Takes a JSON object containing event-card data and returns
+ * the stored event title if it exists, else it returns an empty string.
+ * @param {Object} data A JSON object containing event-card data
+ * @returns {string} Event title string or empty string
+ */
 export function getTitle(data) {
     if (data && data.eTitle) {
         return data.eTitle;
@@ -24,11 +26,27 @@ export function getTitle(data) {
 }
 
 /**
- * Get the organizer of event.
-*/
+ * Takes a JSON object containing event-card data and returns
+ * the stored event organizer if it exists, else it returns an empty string.
+ * @param {Object} data A JSON object containing event-card data
+ * @returns {string} Event organizer string or empty string
+ */
 export function getOrg(data) {
     if (data && data.eOrg) {
         return data.eOrg;
+    }
+    return "";
+}
+
+/**
+ * Takes a JSON object containing event-card data and returns
+ * the stored event location if it exists, else it returns an empty string.
+ * @param {Object} data A JSON object containing event-card data
+ * @returns {string} Event location string or empty string
+ */
+export function getLocation(data) {
+    if (data && data.eMedium) {
+        return data.eMedium;
     }
     return "";
 }
@@ -55,16 +73,6 @@ export function getEnd(data) {
         let dateArray = endArr[0].split("-");
         let MMDDYYY = dateArray[1] + "-" + dateArray[2] + "-" + dateArray[0]
         return "End: " + MMDDYYY + " Time: " + convertTime(endArr[1]);
-    }
-    return "";
-}
-
-/**
- * Get the location of event
-*/
-export function getLocation(data) {
-    if (data && data.eMedium) {
-        return data.eMedium;
     }
     return "";
 }
