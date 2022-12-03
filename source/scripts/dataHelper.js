@@ -7,6 +7,7 @@
  * Need to convert File object to data url first, then it can be stringifyied.
 */
 export function getImg(data) {
+    console.log(data);
     if (data && data.eImg) {
         return data.eImg;
     }
