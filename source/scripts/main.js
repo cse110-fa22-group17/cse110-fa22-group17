@@ -45,9 +45,6 @@ function saveEventsToStorage(events) {
   localStorage.setItem('events', JSON.stringify(events));
 }
 
-// once click the delet button
-
-//document.querySelector('#delete').add
 
 /**
  * Takes in an array of events and for each event creates a
@@ -72,7 +69,7 @@ function addEventsToDoc(events) {
 
 
 /**
- * Takes in a FormData object and uses all of its the key,value
+ * Takes in a FormData object and iterates over all key,value
  * pairs to create a JSON object to be stored onto LocalStorage
  * @param {Array<Object>} formData A FormData object 
  * @return {Object} JSON object with event key,value pairs 
@@ -89,12 +86,14 @@ function convertForm2JSON(formData) {
 /**
  * Adds the necessary event handlers to event-form including:
  * img file display, event-form submission, 
- * event-card creation and storage, cancel button 
+ * event-card creation, event-card storage, 
+ * cancel button, popup ok button
  */
 function initFormHandler() {
   let main = document.querySelector('main')
   let eventForm = document.querySelector('#event-form');
   let cancelbtn = document.querySelector('#cancelbtn');
+  let okButton = document.getElementById('ok');
 
   const imgFile = document.querySelector('#imgFile');
   const eImg = document.querySelector('#eImg');
@@ -132,46 +131,22 @@ function initFormHandler() {
     let localEvents = getEventFromStorage();
     localEvents.push(eventObj);
     saveEventsToStorage(localEvents);
-    
-    console.log('update log');
-    //document.querySelector('.popWin').style.display = 'flex';
-    
-    //popup();
   });
 
   cancelbtn.addEventListener('click', f => {
     f.preventDefault();
     window.location.href ="../homePage.html";
   });
-}
 
-
-//document.getElementById()
-// document.getElementById('added').addEventListener('click',function() {
-
-//   
-   
-// })
-
-//  function popup(){
-//   document.querySelector('.popWin').style.display = 'flex';
-//  }
-
-// document.querySelector('#event-form').addEventListener('submit', function(){
-//   document.querySelector('.popWin').style.display = 'flex';
-// })
-
-let okButton = document.getElementById('ok');
-if(okButton != null){
-  document.getElementById('ok').addEventListener('click',e => {
+  okButton.addEventListener('click', e => {
     e.preventDefault();
-    //document.querySelector('.popWin').style.display = 'none';
-    window.location.href = "../homePage.html";
-
-  })
+    window.location.href = '../homePage.html';
+  });
 }
 
-// goto a specific event page
+/*
+* goto a specific event page
+*/
 function goToSpecificPage(){
   let main = document.querySelector('main');
   let eventList = main.querySelectorAll('event-card');
@@ -187,6 +162,10 @@ function goToSpecificPage(){
   }
 }
 
+
+/*
+* 
+*/
 function addToSpecificPage(events){
   let eventIndex = JSON.parse(window.sessionStorage.getItem('currentEvent'));
   let currentEvent = events[eventIndex];
@@ -222,6 +201,10 @@ function addToSpecificPage(events){
   })
 }
 
+
+/*
+* 
+*/
 function addToEditPage(events){
   let eventIndex = JSON.parse(window.sessionStorage.getItem('currentEvent'));
   let currentEvent = events[eventIndex];
