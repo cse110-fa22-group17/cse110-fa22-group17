@@ -52,7 +52,11 @@ export function getLocation(data) {
 }
 
 /**
- * Get the start of event
+ * Takes a JSON object containing event-card data. If the start time exists, 
+ * format the date to be more readable and time to 12-hour format and return.
+ * Else return an empty string.
+ * @param {Object} data A JSON object containing event-card data
+ * @returns {string} Formatted event start date and time or empty string
 */
 export function getStart(data) {
     if (data && data.startTime) {
@@ -65,7 +69,11 @@ export function getStart(data) {
 }
 
 /**
- * Get the end of event
+ * Takes a JSON object containing event-card data. If the end time exists, 
+ * format the date to be more readable and time to 12-hour format and return.
+ * Else return an empty string.
+ * @param {Object} data A JSON object containing event-card data
+ * @returns {string} Formatted event end date and time or empty string
 */
 export function getEnd(data) {
     if (data && data.endTime) {
@@ -78,8 +86,11 @@ export function getEnd(data) {
 }
 
 /**
- * Helper method to convert 24 Hour time to 12 Hour
- */
+ * Takes a string representing time in 24-hour format and converts it into
+ * 12-hour format.
+ * @param {string} time A string representing time in 24-hour format
+ * @returns {string} A string representing time in 12-hour format
+*/
 function convertTime(time) {
     let timeArr = time.split(":");
     var hourInt = parseInt(timeArr[0])
