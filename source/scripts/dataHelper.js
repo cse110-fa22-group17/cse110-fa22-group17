@@ -3,7 +3,7 @@
  * the stored data URL representing the image if it exists, 
  * else it returns a default image. 
  * @param {Object} data A JSON object containing event-card data
- * @returns {data url | image file} Data url or default image file
+ * @returns {string} Data url or default image file
  */
  export function getImg(data) {
     if (data && data.eImg) {
