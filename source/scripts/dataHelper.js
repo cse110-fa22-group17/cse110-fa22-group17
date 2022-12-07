@@ -93,7 +93,7 @@ export function getEnd(data) {
 */
 function convertTime(time) {
     let timeArr = time.split(":");
-    var hourInt = parseInt(timeArr[0])
+    var hourInt = parseInt(timeArr[0], 10)
     var AMPM = "";
     if (hourInt > 12) {
         AMPM = "PM"
