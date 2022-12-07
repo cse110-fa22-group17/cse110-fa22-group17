@@ -1,3 +1,4 @@
+import {getEnd, getStart} from "../scripts/dataHelper.js";
 window.addEventListener('DOMContentLoaded', init);
 
 // Starts the program, all function calls trace back here
@@ -197,10 +198,10 @@ function addToSpecificPage(events){
   title.innerText = currentEvent.eTitle;
 
   let start_date = document.querySelector('#start_date');
-  start_date.innerText = "Start Time: " + currentEvent.startTime;
+  start_date.innerText = getStart(currentEvent);
 
   let end_date = document.querySelector('#end_date');
-  end_date.innerText = "End Time: " + currentEvent.endTime;
+  end_date.innerText =  getEnd(currentEvent);
 
   let organization = document.querySelector('#organization');
   organization.innerText = "Organization: " + currentEvent.eOrg;
