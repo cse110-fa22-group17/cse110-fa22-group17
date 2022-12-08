@@ -23,9 +23,10 @@
   > Fourth Year CS Major, transferred from UCD in 2021. Sixth College, Former Apple Intern
   > - Personal Github Page: https://github.com/ajwboi
   <img src="./pictures/alan.jpg" width="100">
-- ### Alwin Low: Team Member
+- ### Alwin Low: Front End (CSS & HTML)
   > Fourth Year CS Major in ERC College
   > - Personal Github Page: https://github.com/AstralWin
+   <img src="./pictures/alwin.jpg" width="100">
 - ### Raon Choi: [Role]
   > Fourth year Math/CSE Major. Marshall College
   > - Personal Github Page: https://github.com/h1choi0918
