@@ -36,6 +36,7 @@
 - ### Sohil Nadarajan: [Role]
   > Third year, Math CS major, Revelle College
   > - Personal Github Page: https://github.com/SohilNadarajan
+  > <img src="./pictures/sohil.png" width="200">
 - ### Yiyang Chen: [Role]
   > Second Year CS major from Marshall College. 
   > - Personal Github Page: https://github.com/yic076 
