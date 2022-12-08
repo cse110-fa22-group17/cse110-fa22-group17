@@ -19,7 +19,7 @@
 - ### Aiden Jee: Backend
   > Fourth Year, CS Major in Muir College
   > - Personal Github Page: https://github.com/minpapajee
-  <img src="./pictures/aiden.jpg" width="100">
+  <img src="./pictures/aiden.jpg.jpg" width="100">
 - ### Alan Wen: Team Lead
   > Fourth Year CS Major, transferred from UCD in 2021. Sixth College, Former Apple Intern
   > - Personal Github Page: https://github.com/ajwboi
