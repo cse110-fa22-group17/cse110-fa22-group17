@@ -28,14 +28,14 @@
   > Fourth Year CS Major in ERC College
   > - Personal Github Page: https://github.com/AstralWin
    <img src="./pictures/alwin.jpg" width="100">
-- ### Raon Choi: [Role]
+- ### Raon Choi: [Frontend]
   > Fourth year Math/CSE Major. Marshall College
   > - Personal Github Page: https://github.com/h1choi0918
 - ### Sameer Jain: Backend / QA
   > Third year Computer Science major, Sixth College.  
   > - Personal Github Page: https://github.com/anonsameer
   <img src="./pictures/sameer_pic.jpg" width="100">
-- ### Sohil Nadarajan: [Role]
+- ### Sohil Nadarajan: [Backend]
   > Third year, Math CS major, Revelle College
   > - Personal Github Page: https://github.com/SohilNadarajan
   > <img src="./pictures/sohil.png" width="200">
