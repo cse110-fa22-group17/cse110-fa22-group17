@@ -24,7 +24,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#addEventsToDoc">addEventsToDoc</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#convertForm2JSON">convertForm2JSON</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#convertTime">convertTime</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#dynamicSearch">dynamicSearch</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getEnd">getEnd</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getEventFromStorage">getEventFromStorage</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getImg">getImg</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getLocation">getLocation</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getOrg">getOrg</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getStart">getStart</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getTitle">getTitle</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#initFormHandler">initFormHandler</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#saveEventsToStorage">saveEventsToStorage</a></span></li>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading"><a href="global.html">Globals</a></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#addEventsToDoc">addEventsToDoc</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#convertForm2JSON">convertForm2JSON</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#convertTime">convertTime</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#dynamicSearch">dynamicSearch</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#eventPagesString">eventPagesString</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getEnd">getEnd</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getEventFromStorage">getEventFromStorage</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getImg">getImg</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getLocation">getLocation</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getOrg">getOrg</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getStart">getStart</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#getTitle">getTitle</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#initFormHandler">initFormHandler</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="global.html#saveEventsToStorage">saveEventsToStorage</a></span></li>
 </nav>
 
 <div id="main">
@@ -163,7 +163,7 @@ to <main>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="main.js.html">main.js</a>, <a href="main.js.html#line59">line 59</a>
+        <a href="main.js.html">main.js</a>, <a href="main.js.html#line60">line 60</a>
     </li></ul></dd>
     
 
@@ -299,7 +299,7 @@ pairs to create a JSON object to be stored onto LocalStorage
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="main.js.html">main.js</a>, <a href="main.js.html#line79">line 79</a>
+        <a href="main.js.html">main.js</a>, <a href="main.js.html#line80">line 80</a>
     </li></ul></dd>
     
 
@@ -391,14 +391,15 @@ pairs to create a JSON object to be stored onto LocalStorage
 
     
 
-    <h4 class="name" id="convertTime"><span class="type-signature"></span>convertTime<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="convertTime"><span class="type-signature"></span>convertTime<span class="signature">(time)</span><span class="type-signature"> &rarr; {string}</span></h4>
 
     
 
 
 
 <div class="description">
-    Helper method to convert 24 Hour time to 12 Hour
+    Takes a string representing time in 24-hour format and converts it into
+12-hour format.
 </div>
 
 
@@ -434,7 +435,7 @@ pairs to create a JSON object to be stored onto LocalStorage
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dataHelper.js.html">dataHelper.js</a>, <a href="dataHelper.js.html#line75">line 75</a>
+        <a href="dataHelper.js.html">dataHelper.js</a>, <a href="dataHelper.js.html#line94">line 94</a>
     </li></ul></dd>
     
 
@@ -453,6 +454,56 @@ pairs to create a JSON object to be stored onto LocalStorage
 
 
 
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>time</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>string</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                A string representing time in 24-hour format
+                
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -464,6 +515,33 @@ pairs to create a JSON object to be stored onto LocalStorage
 
 
 
+
+
+
+<div class="section-returns">
+<h5>Returns:</h5>
+
+        
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type"><code>string</code></span>
+
+
+    </dd>
+</dl>
+
+
+<div class="param-desc">
+    A string representing time in 12-hour format
+</div>
+
+    
+</div>
 
 
 
@@ -518,7 +596,7 @@ an input is detected, gets rid of all the results without the input.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="main.js.html">main.js</a>, <a href="main.js.html#line297">line 297</a>
+        <a href="main.js.html">main.js</a>, <a href="main.js.html#line383">line 383</a>
     </li></ul></dd>
     
 
@@ -558,14 +636,16 @@ an input is detected, gets rid of all the results without the input.
 
     
 
-    <h4 class="name" id="getEnd"><span class="type-signature"></span>getEnd<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="eventPagesString"><span class="type-signature"></span>eventPagesString<span class="signature">(grid_prop)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Get the end of event
+    This function returns the innerHTML for the shadowDOM event-pages element.
+Can add more parameters to make more properties flexible and dynamic. Used 
+to make styling the shadowDOM element more dynamic.
 </div>
 
 
@@ -601,7 +681,7 @@ an input is detected, gets rid of all the results without the input.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dataHelper.js.html">dataHelper.js</a>, <a href="dataHelper.js.html#line52">line 52</a>
+        <a href="main.js.html">main.js</a>, <a href="main.js.html#line301">line 301</a>
     </li></ul></dd>
     
 
@@ -620,6 +700,56 @@ an input is detected, gets rid of all the results without the input.
 
 
 
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>grid_prop</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>*</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                value of the grid-prop to be switched to
+                
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -631,6 +761,183 @@ an input is detected, gets rid of all the results without the input.
 
 
 
+
+
+
+<div class="section-returns">
+<h5>Returns:</h5>
+
+        
+
+
+<div class="param-desc">
+    string value for innerHTML of the shadowDOM event-pages element
+</div>
+
+    
+</div>
+
+
+
+</div>
+        
+            
+<div class="section-method">
+
+    
+
+    <h4 class="name" id="getEnd"><span class="type-signature"></span>getEnd<span class="signature">(data)</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Takes a JSON object containing event-card data. If the end time exists, 
+format the date to be more readable and time to 12-hour format and return.
+Else return an empty string.
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dataHelper.js.html">dataHelper.js</a>, <a href="dataHelper.js.html#line78">line 78</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>Object</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                A JSON object containing event-card data
+                
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section-returns">
+<h5>Returns:</h5>
+
+        
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type"><code>string</code></span>
+
+
+    </dd>
+</dl>
+
+
+<div class="param-desc">
+    Formatted event end date and time or empty string
+</div>
+
+    
+</div>
 
 
 
@@ -687,7 +994,7 @@ is returned.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="main.js.html">main.js</a>, <a href="main.js.html#line34">line 34</a>
+        <a href="main.js.html">main.js</a>, <a href="main.js.html#line35">line 35</a>
     </li></ul></dd>
     
 
@@ -752,19 +1059,16 @@ is returned.
 
     
 
-    <h4 class="name" id="getImg"><span class="type-signature"></span>getImg<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="getImg"><span class="type-signature"></span>getImg<span class="signature">(data)</span><span class="type-signature"> &rarr; {string}</span></h4>
 
     
 
 
 
 <div class="description">
-    Get the image of event.
-
-Local storage only is able to store strings.
-It is not possible to directly convert a File object into a string using JSON.stringify (it returns {}).
-In planPage.html the file submission is not included in the event-form to prevent immediate string conversion.
-Need to convert File object to data url first, then it can be stringifyied.
+    Takes a JSON object containing event-card data and returns
+the stored data URL representing the image if it exists, 
+else it returns a default image.
 </div>
 
 
@@ -800,7 +1104,7 @@ Need to convert File object to data url first, then it can be stringifyied.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dataHelper.js.html">dataHelper.js</a>, <a href="dataHelper.js.html#line9">line 9</a>
+        <a href="dataHelper.js.html">dataHelper.js</a>, <a href="dataHelper.js.html#line8">line 8</a>
     </li></ul></dd>
     
 
@@ -819,6 +1123,56 @@ Need to convert File object to data url first, then it can be stringifyied.
 
 
 
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>Object</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                A JSON object containing event-card data
+                
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -830,6 +1184,33 @@ Need to convert File object to data url first, then it can be stringifyied.
 
 
 
+
+
+
+<div class="section-returns">
+<h5>Returns:</h5>
+
+        
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type"><code>string</code></span>
+
+
+    </dd>
+</dl>
+
+
+<div class="param-desc">
+    Data url or default image file
+</div>
+
+    
+</div>
 
 
 
@@ -840,14 +1221,15 @@ Need to convert File object to data url first, then it can be stringifyied.
 
     
 
-    <h4 class="name" id="getLocation"><span class="type-signature"></span>getLocation<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="getLocation"><span class="type-signature"></span>getLocation<span class="signature">(data)</span><span class="type-signature"> &rarr; {string}</span></h4>
 
     
 
 
 
 <div class="description">
-    Get the location of event
+    Takes a JSON object containing event-card data and returns
+the stored event location if it exists, else it returns an empty string.
 </div>
 
 
@@ -883,7 +1265,7 @@ Need to convert File object to data url first, then it can be stringifyied.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dataHelper.js.html">dataHelper.js</a>, <a href="dataHelper.js.html#line65">line 65</a>
+        <a href="dataHelper.js.html">dataHelper.js</a>, <a href="dataHelper.js.html#line47">line 47</a>
     </li></ul></dd>
     
 
@@ -902,6 +1284,56 @@ Need to convert File object to data url first, then it can be stringifyied.
 
 
 
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>Object</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                A JSON object containing event-card data
+                
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -913,6 +1345,33 @@ Need to convert File object to data url first, then it can be stringifyied.
 
 
 
+
+
+
+<div class="section-returns">
+<h5>Returns:</h5>
+
+        
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type"><code>string</code></span>
+
+
+    </dd>
+</dl>
+
+
+<div class="param-desc">
+    Event location string or empty string
+</div>
+
+    
+</div>
 
 
 
@@ -923,14 +1382,15 @@ Need to convert File object to data url first, then it can be stringifyied.
 
     
 
-    <h4 class="name" id="getOrg"><span class="type-signature"></span>getOrg<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="getOrg"><span class="type-signature"></span>getOrg<span class="signature">(data)</span><span class="type-signature"> &rarr; {string}</span></h4>
 
     
 
 
 
 <div class="description">
-    Get the organizer of event.
+    Takes a JSON object containing event-card data and returns
+the stored event organizer if it exists, else it returns an empty string.
 </div>
 
 
@@ -966,7 +1426,7 @@ Need to convert File object to data url first, then it can be stringifyied.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dataHelper.js.html">dataHelper.js</a>, <a href="dataHelper.js.html#line29">line 29</a>
+        <a href="dataHelper.js.html">dataHelper.js</a>, <a href="dataHelper.js.html#line34">line 34</a>
     </li></ul></dd>
     
 
@@ -985,6 +1445,56 @@ Need to convert File object to data url first, then it can be stringifyied.
 
 
 
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>Object</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                A JSON object containing event-card data
+                
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -996,6 +1506,33 @@ Need to convert File object to data url first, then it can be stringifyied.
 
 
 
+
+
+
+<div class="section-returns">
+<h5>Returns:</h5>
+
+        
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type"><code>string</code></span>
+
+
+    </dd>
+</dl>
+
+
+<div class="param-desc">
+    Event organizer string or empty string
+</div>
+
+    
+</div>
 
 
 
@@ -1006,14 +1543,16 @@ Need to convert File object to data url first, then it can be stringifyied.
 
     
 
-    <h4 class="name" id="getStart"><span class="type-signature"></span>getStart<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="getStart"><span class="type-signature"></span>getStart<span class="signature">(data)</span><span class="type-signature"> &rarr; {string}</span></h4>
 
     
 
 
 
 <div class="description">
-    Get the start of event
+    Takes a JSON object containing event-card data. If the start time exists, 
+format the date to be more readable and time to 12-hour format and return.
+Else return an empty string.
 </div>
 
 
@@ -1049,7 +1588,7 @@ Need to convert File object to data url first, then it can be stringifyied.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dataHelper.js.html">dataHelper.js</a>, <a href="dataHelper.js.html#line39">line 39</a>
+        <a href="dataHelper.js.html">dataHelper.js</a>, <a href="dataHelper.js.html#line61">line 61</a>
     </li></ul></dd>
     
 
@@ -1068,6 +1607,56 @@ Need to convert File object to data url first, then it can be stringifyied.
 
 
 
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>Object</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                A JSON object containing event-card data
+                
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -1079,6 +1668,33 @@ Need to convert File object to data url first, then it can be stringifyied.
 
 
 
+
+
+
+<div class="section-returns">
+<h5>Returns:</h5>
+
+        
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type"><code>string</code></span>
+
+
+    </dd>
+</dl>
+
+
+<div class="param-desc">
+    Formatted event start date and time or empty string
+</div>
+
+    
+</div>
 
 
 
@@ -1089,14 +1705,15 @@ Need to convert File object to data url first, then it can be stringifyied.
 
     
 
-    <h4 class="name" id="getTitle"><span class="type-signature"></span>getTitle<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="getTitle"><span class="type-signature"></span>getTitle<span class="signature">(data)</span><span class="type-signature"> &rarr; {string}</span></h4>
 
     
 
 
 
 <div class="description">
-    Get the title of event.
+    Takes a JSON object containing event-card data and returns
+the stored event title if it exists, else it returns an empty string.
 </div>
 
 
@@ -1132,7 +1749,7 @@ Need to convert File object to data url first, then it can be stringifyied.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="dataHelper.js.html">dataHelper.js</a>, <a href="dataHelper.js.html#line19">line 19</a>
+        <a href="dataHelper.js.html">dataHelper.js</a>, <a href="dataHelper.js.html#line21">line 21</a>
     </li></ul></dd>
     
 
@@ -1151,6 +1768,56 @@ Need to convert File object to data url first, then it can be stringifyied.
 
 
 
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>Object</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                A JSON object containing event-card data
+                
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
 
 
 
@@ -1162,6 +1829,33 @@ Need to convert File object to data url first, then it can be stringifyied.
 
 
 
+
+
+
+<div class="section-returns">
+<h5>Returns:</h5>
+
+        
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type"><code>string</code></span>
+
+
+    </dd>
+</dl>
+
+
+<div class="param-desc">
+    Event title string or empty string
+</div>
+
+    
+</div>
 
 
 
@@ -1215,7 +1909,7 @@ Need to convert File object to data url first, then it can be stringifyied.
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="main.js.html">main.js</a>, <a href="main.js.html#line91">line 91</a>
+        <a href="main.js.html">main.js</a>, <a href="main.js.html#line92">line 92</a>
     </li></ul></dd>
     
 
@@ -1299,7 +1993,7 @@ saves that string to 'events' in localStorage
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="main.js.html">main.js</a>, <a href="main.js.html#line44">line 44</a>
+        <a href="main.js.html">main.js</a>, <a href="main.js.html#line45">line 45</a>
     </li></ul></dd>
     
 
@@ -1403,7 +2097,7 @@ saves that string to 'events' in localStorage
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Sat Dec 03 2022 03:25:47 GMT+0000 (Coordinated Universal Time) using the Minami theme.
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.7</a> on Thu Dec 08 2022 00:45:53 GMT+0000 (Coordinated Universal Time) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>
