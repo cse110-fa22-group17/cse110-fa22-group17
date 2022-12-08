@@ -42,5 +42,5 @@
 - ### Yuheng Ge: Team Lead
   > Senior CS student from ERC college.
   > - Personal Github Page: https://github.com/GYH1208
-  > <img src="./pictures/profile-Yuheng.jpg" width="100">
+  > <img src="./pictures/profile-Yuheng.jpg" width="200">
   
