@@ -1,4 +1,5 @@
 const { Browser, default: puppeteer } = require("puppeteer");
+jest.setTimeout(100000);
 
 describe('Basic user flow for Website', () => {
     // visit the homepage 
@@ -17,6 +18,8 @@ describe('Basic user flow for Website', () => {
         expect(handle.length).toBe(1);
     })
 
+
+
     it("Create 1 event", async () => {
         await createEvent();
         
@@ -27,8 +30,6 @@ describe('Basic user flow for Website', () => {
         expect(elementText).toBe("You have 1 events planned!");
     })
 
-    
-    /*
     it("Create 5 events", async () => {
         // Clear from previous tests.
         await page.evaluate(() => {
@@ -50,7 +51,7 @@ describe('Basic user flow for Website', () => {
         expect(numEventsHTML).toBe(5);
 
     })
-    */
+
 
     it("Create and delete an event", async () => {
         // Clear from previous tests.
@@ -60,11 +61,12 @@ describe('Basic user flow for Website', () => {
 
 
         await createEvent();
+        await page.waitForFunction(() => document.readyState === "complete");
         const eventCard = await page.$('event-card');
         const shadow = await eventCard.getProperty("shadowRoot");
         const button1 = await shadow.$("button");
         await button1.click();
-        await page.waitForTimeout(3000);
+        await page.waitForFunction(() => document.readyState === "complete");
         await page.click('#edit_event');
         await page.click('#delete');
 
@@ -81,11 +83,12 @@ describe('Basic user flow for Website', () => {
           });
 
         await createEvent();
+        await page.waitForFunction(() => document.readyState === "complete");
         const eventCard = await page.$('event-card');
         const shadow = await eventCard.getProperty("shadowRoot");
         const button1 = await shadow.$("button");
         await button1.click();
-        await page.waitForTimeout(3000)
+        await page.waitForFunction(() => document.readyState === "complete");
         await page.click('#edit_event');
 
         const titleField = await page.$('#eTitle',);
@@ -100,10 +103,20 @@ describe('Basic user flow for Website', () => {
         const modifiedDescrip = 'CSE 110 Final Lecture';
         const modifiedLoc = 'WLH 2001';
 
-
+        // Clear exisitng text
+        
+    
+        await titleField.click({clickCount: 3});
+        
+        
+        
+        
         await titleField.type(modifedTitle);
+        await orgField.click({clickCount: 3});
         await orgField.type(modifedOrg);
+        await descripField.click({clickCount: 3});
         await descripField.type(modifiedDescrip);
+        await locField.click({clickCount: 3});
         await locField.type(modifiedLoc);
         
         await startField.type('12082022');
@@ -118,23 +131,36 @@ describe('Basic user flow for Website', () => {
 
         await page.click('#ok');
 
-        await button1.click();
+        
+        
+        
+
+
+        await page.waitForFunction(() => document.readyState === "complete");
+        const eventCard2 = await page.$('event-card');
+        const shadow2 = await eventCard2.getProperty("shadowRoot");
+        const button2 = await shadow2.$("button");
+        await button2.click();
+        await page.waitForFunction(() => document.readyState === "complete");
+        
+        
+        //await button1.click();
 
         const editStart = await page.$('#start_date');
         const editStartText = await page.evaluate(editStart => editStart.innerText.trim(), editStart);
-        expect(editStartText).toBe('2022-12-08T20:00');
+        expect(editStartText).toBe('Start Time: 2022-12-08T20:00');
 
         const editEnd = await page.$('#end_date');
         const editEndtText = await page.evaluate(editEnd => editEnd.innerText.trim(), editEnd);
-        expect(editEndtText).toBe('2022-12-08T22:00');
+        expect(editEndtText).toBe('End Time: 2022-12-08T22:00');
 
         const editOrg = await page.$('#organization');
         const editOrgText = await page.evaluate(editOrg => editOrg.innerText.trim(), editOrg);
-        expect(editEndtText).toBe('Organization: ' + modifedOrg);
+        expect(editOrgText).toBe('Organization: ' + modifedOrg);
 
         const editLoc = await page.$('#location');
         const editLocText = await page.evaluate(editLoc => editLoc.innerText.trim(), editLoc);
-        expect(editLocText).toBe('Location : ' + modifiedLoc);
+        expect(editLocText).toBe('Location: ' + modifiedLoc);
 
         const editDescrip = await page.$('#description');
         const editDescripText = await page.evaluate(editDescrip => editDescrip.innerText.trim(), editDescrip);
@@ -146,7 +172,6 @@ describe('Basic user flow for Website', () => {
 
         
     })
-
 
 
 
