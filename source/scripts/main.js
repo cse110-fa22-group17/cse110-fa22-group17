@@ -1,3 +1,4 @@
+import {getEnd, getStart} from "../scripts/dataHelper.js";
 window.addEventListener('DOMContentLoaded', init);
 
 // Starts the program, all function calls trace back here
@@ -45,7 +46,7 @@ function saveEventsToStorage(events) {
   localStorage.setItem('events', JSON.stringify(events));
 }
 
-// once click the delet button
+// once click the delete button
 
 //document.querySelector('#delete').add
 
@@ -197,10 +198,10 @@ function addToSpecificPage(events){
   title.innerText = currentEvent.eTitle;
 
   let start_date = document.querySelector('#start_date');
-  start_date.innerText = "Start Time: " + currentEvent.startTime;
+  start_date.innerText = getStart(currentEvent);
 
   let end_date = document.querySelector('#end_date');
-  end_date.innerText = "End Time: " + currentEvent.endTime;
+  end_date.innerText =  getEnd(currentEvent);
 
   let organization = document.querySelector('#organization');
   organization.innerText = "Organization: " + currentEvent.eOrg;
@@ -291,6 +292,91 @@ function addToEditPage(events){
 }
 
 /**
+ * This function returns the innerHTML for the shadowDOM event-pages element.
+ * Can add more parameters to make more properties flexible and dynamic. Used 
+ * to make styling the shadowDOM element more dynamic. 
+ * @param {*} grid_prop value of the grid-prop to be switched to 
+ * @returns string value for innerHTML of the shadowDOM event-pages element
+ */
+function eventPagesString(grid_prop) {
+  let s = `
+  
+  * {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+  }
+
+  article {
+      align-items: center;
+      border: 0px solid #414BB2;
+      border-radius: 8px;
+      display: ${grid_prop};
+      grid-template-rows: 80px 50px 15px 18px 15px 36px;
+      height: 400px;
+      padding: 5px 20px 90px 20px;
+      float: left;
+      column-gap: 10%;
+      row-gap: 10%;
+      margin-right: 40px;
+      margin-bottom: 20px;
+  }
+
+  article p{
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: -3.5cm;
+  }
+
+  article p+p {
+      color: #000;
+      font-size: 20px;
+      padding-bottom: 40px;
+      text-align: center;
+      margin-bottom: -3cm;
+    }
+
+    
+  article h1 {
+      color: #000;
+      text-align: center;
+      margin-bottom: -7cm;
+    }
+
+    article img {
+      border: 5px solid #414BB2;
+      border-radius: 8px;
+      margin-top:auto;
+      margin-bttom: auto;
+      margin-left: auto;
+      margin-right: auto;
+      width: 400px;
+      height: 250px;
+     
+    }
+
+    article button {
+      align_items:bottom;
+      border: 1px solid #414BB2;
+      background-color: #414BB2;
+      border-radius: 14px;
+      color: white;
+      cursor: pointer;
+      font-size: 20px;
+      padding: 5px 20px;
+      top:50%;
+      margin-bottom: -3.5cm;
+    }
+
+    article button:hover {
+      background-color: #21287e;
+    }`;
+  return s;
+}
+
+/**
  * Gives a dynamic searching functionality to the search bar. When
  * an input is detected, gets rid of all the results without the input.
  */
@@ -305,149 +391,12 @@ function addToEditPage(events){
     let x = eventShadow.querySelector('style');
     let y = eventShadow.querySelector('.title');
     if (!(y.textContent.toLowerCase().includes(input))) {
-      x.innerHTML = 
-      `
-      * {
-          font-family: sans-serif;
-          margin: 0;
-          padding: 0;
-      }
-
-      article {
-          align-items: center;
-          border: 1px solid #000;
-          border-radius: 8px;
-          display: none;
-          grid-template-rows: 80px 50px 15px 18px 15px 36px;
-          height: 400px;
-          padding: 5px 20px 20px 20px;
-          float: left;
-          column-gap: 10%;
-          row-gap: 10%;
-          margin-right: 40px;
-          margin-bottom: 20px;
-      }
-
-      article p{
-        color: #000;
-        font-size: 20px;
-        text-align: center;
-        margin-top: 50px;
-        margin-bottom: -3.5cm;
-      }
-
-      article p+p {
-          color: #000;
-          font-size: 20px;
-          padding-bottom: 40px;
-          text-align: center;
-          margin-bottom: -3.5cm;
-        }
-
-        
-      article h1 {
-          color: #000;
-          text-align: center;
-          margin-bottom: -7cm;
-        }
-
-        article img {
-          border: 5px solid black;
-          border-radius: 8px;
-          margin-top:auto;
-          margin-bttom: auto;
-          margin-left: auto;
-          margin-right: auto;
-          width: 400px;
-          height: 250px;
-         
-        }
-
-        article button {
-          align_items:bottom;
-          border: 1px solid #414BB2;
-          background-color: #414BB2;
-          border-radius: 14px;
-          color: white;
-          cursor: pointer;
-          font-size: 20px;
-          padding: 5px 20px;
-          top:50%;
-          margin-bottom: -3.5cm;
-        }`;
+      let article_none = eventPagesString('none');
+      x.innerHTML = article_none;
     }
     else {
-      x.innerHTML = `
-      * {
-          font-family: sans-serif;
-          margin: 0;
-          padding: 0;
-      }
-
-      article {
-          align-items: center;
-          border: 1px solid #000;
-          border-radius: 8px;
-          display: grid;
-          grid-template-rows: 80px 50px 15px 18px 15px 36px;
-          height: 400px;
-          padding: 5px 20px 20px 20px;
-          float: left;
-          column-gap: 10%;
-          row-gap: 10%;
-          margin-right: 40px;
-          margin-bottom: 20px;
-      }
-
-      article p{
-        color: #000;
-        font-size: 20px;
-        text-align: center;
-        margin-top: 50px;
-        margin-bottom: -3.5cm;
-      }
-
-      article p+p {
-          color: #000;
-          font-size: 20px;
-          padding-bottom: 40px;
-          text-align: center;
-          margin-bottom: -3.5cm;
-        }
-
-        
-      article h1 {
-          color: #000;
-          text-align: center;
-          margin-bottom: -7cm;
-        }
-
-        article img {
-          border: 5px solid black;
-          border-radius: 8px;
-          margin-top:auto;
-          margin-bttom: auto;
-          margin-left: auto;
-          margin-right: auto;
-          width: 400px;
-          height: 250px;
-         
-        }
-
-        article button {
-          align_items:bottom;
-          border: 1px solid #414BB2;
-          background-color: #414BB2;
-          border-radius: 14px;
-          color: white;
-          cursor: pointer;
-          font-size: 20px;
-          padding: 5px 20px;
-          top:50%;
-          margin-bottom: -3.5cm;
-        }
-      
-      `;
+      let article_grid = eventPagesString('grid');
+      x.innerHTML = article_grid;
     }
   }
 }
@@ -455,4 +404,7 @@ function addToEditPage(events){
 if (document.getElementsByClassName('search-bar')[0]) {
   document.getElementsByClassName('search-bar')[0].addEventListener('input', dynamicSearch);
 }
+
+
+
 
