@@ -207,6 +207,7 @@ async function createEvent() {
 
 // Helper method to count  eventCard HTML elements
 async function countNumberofEventHTML() {
+    await page.waitForFunction(() => document.readyState === "complete");
     const elements = await page.$$('event-card');
     return elements.length;
 }
