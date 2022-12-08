@@ -148,11 +148,11 @@ describe('Basic user flow for Website', () => {
 
         const editStart = await page.$('#start_date');
         const editStartText = await page.evaluate(editStart => editStart.innerText.trim(), editStart);
-        expect(editStartText).toBe('Start Time: 2022-12-08T20:00');
+        expect(editStartText).toBe('Start: 12-08-2022 Time: 8:00 PM');
 
         const editEnd = await page.$('#end_date');
         const editEndtText = await page.evaluate(editEnd => editEnd.innerText.trim(), editEnd);
-        expect(editEndtText).toBe('End Time: 2022-12-08T22:00');
+        expect(editEndtText).toBe('End: 12-08-2022 Time: 10:00 PM');
 
         const editOrg = await page.$('#organization');
         const editOrgText = await page.evaluate(editOrg => editOrg.innerText.trim(), editOrg);
