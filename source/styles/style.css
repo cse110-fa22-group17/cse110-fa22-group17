@@ -294,18 +294,6 @@ h1 {
     margin-bottom: -2cm;
 }
 
-#eImg {
-    display: block;
-    scale: 0.8;
-    border: 5px solid #414BB2;
-    border-radius: 8px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 800px;
-    height: 300px;
-    margin-bottom: -2cm;
-}
-
 /* Edit Event Page */
 #edit_event_grid {
     display: grid; 
