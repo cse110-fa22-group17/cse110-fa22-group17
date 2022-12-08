@@ -28,9 +28,10 @@
 - ### Raon Choi: [Role]
   > Fourth year Math/CSE Major. Marshall College
   > - Personal Github Page: https://github.com/h1choi0918
-- ### Sameer Jain: Team Member
-  > Third year Computer Science major, Sixth College, intern at Pacific Life.  
+- ### Sameer Jain: Backend / QA
+  > Third year Computer Science major, Sixth College.  
   > - Personal Github Page: https://github.com/anonsameer
+  <img src="./pictures/sameer_pic.jpg" width="100">
 - ### Sohil Nadarajan: [Role]
   > Third year, Math CS major, Revelle College
   > - Personal Github Page: https://github.com/SohilNadarajan
