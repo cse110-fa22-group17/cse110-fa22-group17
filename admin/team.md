@@ -12,9 +12,10 @@
 - Focus
 
 ## Team Members: 
-- ### Alex Wang: [Role]
-  > Fourth Year, Computer Engineering, Warren College
-  > - Personal Github Page: https://alw002.github.io/
+- ### Alex Wang: [Developer with focus on backend and CI/CD pipeline]
+  > Fourth Year, Computer Engineering, Warren College  
+  > - Personal Github Page: https://alw002.github.io/  
+  <img src="./pictures/a_pic.png" width="100">
 - ### Aiden Jee: Team Member
   > Fourth Year, CS Major in Muir College
   > - Personal Github Page: https://github.com/minpapajee
@@ -24,9 +25,6 @@
 - ### Alwin Low: Team Member
   > Fourth Year CS Major in ERC College
   > - Personal Github Page: https://github.com/AstralWin
-- ### Katherine Wong: [Role]
-  > Fourth year Human Biology Major + Computer Science Minor
-  > - Personal Github Page: https://katherinemwong.github.io/
 - ### Raon Choi: [Role]
   > Fourth year Math/CSE Major. Marshall College
   > - Personal Github Page: https://github.com/h1choi0918
