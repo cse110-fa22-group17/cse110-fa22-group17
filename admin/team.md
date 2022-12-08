@@ -31,6 +31,7 @@
 - ### Raon Choi: [Frontend]
   > Fourth year Math/CSE Major. Marshall College
   > - Personal Github Page: https://github.com/h1choi0918
+  <img src="./pictures/rhchoi.jpg" width="100">
 - ### Sameer Jain: Backend / QA
   > Third year Computer Science major, Sixth College.  
   > - Personal Github Page: https://github.com/anonsameer
