@@ -133,9 +133,6 @@ describe('Basic user flow for Website', () => {
 
         
         
-        
-
-
         await page.waitForFunction(() => document.readyState === "complete");
         const eventCard2 = await page.$('event-card');
         const shadow2 = await eventCard2.getProperty("shadowRoot");
