@@ -39,6 +39,7 @@
 - ### Yiyang Chen: [Role]
   > Second Year CS major from Marshall College. 
   > - Personal Github Page: https://github.com/yic076 
+  > <img src="./pictures/yi.jpg" width="100">
 - ### Yuheng Ge: Team Lead
   > Senior CS student from ERC college.
   > - Personal Github Page: https://github.com/GYH1208
