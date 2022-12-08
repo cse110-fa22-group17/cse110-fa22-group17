@@ -30,6 +30,7 @@ describe('Basic user flow for Website', () => {
         expect(elementText).toBe("You have 1 events planned!");
     })
 
+
     it("Create 5 events", async () => {
         // Clear from previous tests.
         await page.evaluate(() => {
@@ -51,6 +52,7 @@ describe('Basic user flow for Website', () => {
         expect(numEventsHTML).toBe(5);
 
     })
+
 
 
     it("Create and delete an event", async () => {
@@ -205,10 +207,8 @@ async function createEvent() {
 
 // Helper method to count  eventCard HTML elements
 async function countNumberofEventHTML() {
-    const elementCount = await page.evaluate(() => {
-        return document.querySelectorAll('event-card').length;
-      });
-    return await elementCount;
+    const elements = await page.$$('event-card');
+    return elements.length;
 }
 
 
