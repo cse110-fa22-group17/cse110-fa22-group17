@@ -12,7 +12,7 @@
 - Focus
 
 ## Team Members: 
-- ### Alex Wang: [Developer with focus on backend and CI/CD pipeline]
+- ### Alex Wang: Developer with focus on backend and CI/CD pipeline
   > Fourth Year, Computer Engineering, Warren College  
   > - Personal Github Page: https://alw002.github.io/  
   <img src="./pictures/a_pic.png" width="100">
