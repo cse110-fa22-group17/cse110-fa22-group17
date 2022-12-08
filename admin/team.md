@@ -16,9 +16,10 @@
   > Fourth Year, Computer Engineering, Warren College  
   > - Personal Github Page: https://alw002.github.io/  
   <img src="./pictures/a_pic.png" width="100">
-- ### Aiden Jee: Team Member
+- ### Aiden Jee: Backend
   > Fourth Year, CS Major in Muir College
   > - Personal Github Page: https://github.com/minpapajee
+  <img src="./pictures/aiden.jpg" width="100">
 - ### Alan Wen: Team Lead
   > Fourth Year CS Major, transferred from UCD in 2021. Sixth College, Former Apple Intern
   > - Personal Github Page: https://github.com/ajwboi
