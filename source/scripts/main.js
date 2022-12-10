@@ -85,7 +85,7 @@ function convertForm2JSON(formData) {
   return eventObj;
 }
 
-
+var changed = false;
 /**
  * Adds the necessary event handlers to <form> 
  */
@@ -93,6 +93,7 @@ function initFormHandler() {
   let main = document.querySelector('main')
   let eventForm = document.querySelector('#event-form');
   let cancelbtn = document.querySelector('#cancelbtn');
+  changed = false;
 
   const imgFile = document.querySelector('#imgFile');
   const eImg = document.querySelector('#eImg');
@@ -100,9 +101,11 @@ function initFormHandler() {
 
   // Displays image file via dataurl and saves it to be stored locally when form is submitted
   imgFile.addEventListener('change', (event) => {
+
     const file = imgFile.files[0];
     const reader = new FileReader();
     console.log(eImg);
+    changed = true;
     reader.addEventListener('load', () => {
         eImg.src = reader.result;
         dataURL = reader.result;
@@ -189,10 +192,13 @@ function addToSpecificPage(events){
   let eventIndex = JSON.parse(window.sessionStorage.getItem('currentEvent'));
   let currentEvent = events[eventIndex];
 
+
   let img = document.querySelector('#img');
   img.src = currentEvent.eImg;
   if (currentEvent.eImg == undefined) { img.src="../images/no-image.png";}
   img.als = currentEvent.eTitle;
+
+
 
   let title = document.querySelector('#title');
   title.innerText = currentEvent.eTitle;
@@ -212,6 +218,8 @@ function addToSpecificPage(events){
   let descrption = document.querySelector('#description');
   descrption.innerText = currentEvent.eDesc;
 
+  //JSON.parse(window.sessionStorage.setItem('editEventImg', img.src));
+
   document.querySelector('#edit_event').addEventListener('click', ()=>{
     window.location.href = "../reference/editEventPage.html";
   })
@@ -219,7 +227,7 @@ function addToSpecificPage(events){
     window.location.href = "../homePage.html";    
   })
 }
-
+//edit page
 function addToEditPage(events){
   let eventIndex = JSON.parse(window.sessionStorage.getItem('currentEvent'));
   let currentEvent = events[eventIndex];
@@ -267,7 +275,14 @@ function addToEditPage(events){
     currentEvent.eOrg = document.getElementById('eOrg').value;
     currentEvent.eMedium = document.getElementById('eMedium').value;
     currentEvent.eDesc = document.getElementById('eDesc').value;
-    currentEvent.eImg = JSON.parse(window.sessionStorage.getItem('editEventImg'));
+
+    //if the image if changed, then update the editEventImg, viceversa
+    if(changed == true ){
+      currentEvent.eImg = JSON.parse(window.sessionStorage.getItem('editEventImg'));
+    }
+    
+    else{currentEvent.eImg = JSON.parse(window.sessionStorage.getItem("currentEventImg"));
+   }
 
     events[eventIndex] = currentEvent;
     window.localStorage.setItem('events', JSON.stringify(events)); 
